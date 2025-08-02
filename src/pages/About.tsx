@@ -61,7 +61,7 @@ const About = () => {
           {/* Content */}
           <motion.div variants={itemVariants} className="space-y-8">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold">Who Am I?</h2>
+              <h2 className="text-3xl font-bold">Creative Developer from Chennai</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Hello! I'm Aadarsh K A S, a passionate creative developer with a deep love for 

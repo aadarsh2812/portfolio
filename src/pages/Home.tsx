@@ -30,7 +30,7 @@ const Home = () => {
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com/aadarsh', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/aadarsh', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/aadarshkas2812', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/aadarsh', label: 'Twitter' },
   ];
 
