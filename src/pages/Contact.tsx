@@ -40,13 +40,13 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'kasaadarsh@gmail.com', href: 'mailto:kasaadarsh@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '+91 9876543210', href: 'tel:+919876543210' },
+    { icon: Phone, label: 'Phone', value: '+91 9443973324', href: 'tel:+919443973324' },
     { icon: MapPin, label: 'Location', value: 'Chennai, India', href: '' },
   ];
 
   const socialLinks = [
-    { icon: Github, label: 'GitHub', href: 'https://github.com/aadarsh', username: '@aadarsh' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/aadarshkas2812', username: '/in/aadarshkas2812' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/aadarsh2812', username: '@aadarsh2812' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/aadarsh-k-a-s-771558293', username: '/in/aadarsh-k-a-s-771558293' },
     { icon: Twitter, label: 'Twitter', href: 'https://twitter.com/aadarsh', username: '@aadarsh' },
     { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/aadarsh', username: '@aadarsh' },
     { icon: Youtube, label: 'YouTube', href: 'https://youtube.com/@aadarsh', username: '@aadarsh' },

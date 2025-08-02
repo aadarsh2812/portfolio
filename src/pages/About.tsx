@@ -64,27 +64,28 @@ const About = () => {
               <h2 className="text-3xl font-bold">Creative Developer from Chennai</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Hello! I'm Aadarsh K A S, a passionate creative developer with a deep love for 
-                  crafting exceptional digital experiences. With over 3 years of experience in 
-                  web development, I specialize in creating modern, responsive, and user-friendly 
-                  applications that solve real-world problems.
+                  Hello! I'm Aadarsh K A S, a passionate B.E. Electronics Engineering student 
+                  specializing in IoT, embedded systems, and PCB design for secure, real-time defense 
+                  applications. Currently pursuing my degree at Rajalakshmi Institute of Technology 
+                  with a CGPA of 8.7/10.0.
                 </p>
                 <p>
-                  My journey in development started during my college years when I discovered 
-                  the power of code to bring ideas to life. Since then, I've been constantly 
-                  learning and evolving, staying up-to-date with the latest technologies and 
-                  best practices in the industry.
+                  My journey in electronics and embedded systems started during my college years when I 
+                  discovered the power of IoT and embedded technologies to solve real-world problems. 
+                  I've been privileged to intern at Spinacle Technologies, where I developed mission-critical 
+                  IoT systems and worked on healthcare devices using embedded systems.
                 </p>
                 <p>
-                  I believe in writing clean, maintainable code and creating intuitive user 
-                  interfaces that provide seamless experiences. When I'm not coding, you can 
-                  find me exploring new technologies, contributing to open-source projects, 
-                  or sharing my knowledge through technical articles and tutorials.
+                  As a published researcher in IEEE, I've presented my work on smart wheelchair systems 
+                  based on voice recognition for physically disabled people. My expertise spans across 
+                  IoT development, PCB design using Altium, and embedded programming with various 
+                  development boards including Arduino, Raspberry Pi, STM32, and ESP32.
                 </p>
                 <p>
-                  My goal is to continue growing as a developer while contributing to meaningful 
-                  projects that make a positive impact. I'm always excited about new challenges 
-                  and opportunities to collaborate with like-minded individuals and teams.
+                  I'm passionate about contributing to innovative defense technologies and anti-drone 
+                  systems. When I'm not working on embedded projects, you can find me leading IoT 
+                  workshops, mentoring juniors, or exploring new technologies in machine learning 
+                  and digital electronics.
                 </p>
               </div>
             </div>
@@ -128,11 +129,11 @@ const About = () => {
               className="grid grid-cols-3 gap-4 mt-8"
             >
               <div className="glass rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-primary">3+</div>
+                <div className="text-2xl font-bold text-primary">4+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div className="glass rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-primary">50+</div>
+                <div className="text-2xl font-bold text-primary">15+</div>
                 <div className="text-sm text-muted-foreground">Projects</div>
               </div>
               <div className="glass rounded-xl p-4 text-center">

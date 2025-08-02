@@ -29,7 +29,7 @@ const Home = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/aadarsh', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/aadarsh2812', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/aadarshkas2812', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/aadarsh', label: 'Twitter' },
   ];
@@ -51,7 +51,7 @@ const Home = () => {
                 <span className="text-gradient-primary">Aadarsh K A S</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">
-                Creative Developer
+                Electronics Engineering Student & IoT Developer
               </h2>
             </motion.div>
 
@@ -59,8 +59,9 @@ const Home = () => {
               variants={itemVariants}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0"
             >
-              Passionate about crafting beautiful, functional web experiences using modern 
-              technologies. Specialized in React, TypeScript, and full-stack development.
+              Passionate B.E. Electronics Engineering student specializing in IoT, embedded systems, 
+              and PCB design for secure, real-time defense applications. Published researcher in IEEE 
+              with hands-on experience in developing mission-critical IoT systems.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

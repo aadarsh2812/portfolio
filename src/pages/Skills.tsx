@@ -6,66 +6,75 @@ import { Badge } from '@/components/ui/badge';
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: 'Embedded Systems',
       skills: [
-        { name: 'React', level: 95, icon: '⚛️' },
-        { name: 'TypeScript', level: 90, icon: '📘' },
-        { name: 'JavaScript', level: 95, icon: '💛' },
-        { name: 'HTML/CSS', level: 98, icon: '🎨' },
-        { name: 'Tailwind CSS', level: 85, icon: '🌪️' },
-        { name: 'Next.js', level: 80, icon: '▲' },
+        { name: 'Arduino', level: 95, icon: '🔧' },
+        { name: 'Raspberry Pi', level: 90, icon: '🍓' },
+        { name: 'ESP32/ESP8266', level: 95, icon: '📡' },
+        { name: 'STM32', level: 85, icon: '💾' },
+        { name: 'TI Launchpad', level: 80, icon: '🚀' },
+        { name: 'DSP Processor', level: 75, icon: '📊' },
       ]
     },
     {
-      title: 'Backend',
+      title: 'Programming',
       skills: [
-        { name: 'Node.js', level: 85, icon: '🟢' },
-        { name: 'Express.js', level: 80, icon: '🚀' },
-        { name: 'Python', level: 75, icon: '🐍' },
-        { name: 'Django', level: 70, icon: '🎯' },
-        { name: 'REST APIs', level: 85, icon: '🔌' },
-        { name: 'GraphQL', level: 65, icon: '📊' },
+        { name: 'C', level: 95, icon: '💻' },
+        { name: 'Python', level: 90, icon: '🐍' },
+        { name: 'Embedded C', level: 95, icon: '⚡' },
+        { name: 'Java', level: 80, icon: '☕' },
+        { name: 'Machine Learning', level: 75, icon: '🤖' },
+        { name: 'IoT Development', level: 90, icon: '🌐' },
       ]
     },
     {
-      title: 'Database & Tools',
+      title: 'Tools & Design',
       skills: [
-        { name: 'MongoDB', level: 80, icon: '🍃' },
-        { name: 'PostgreSQL', level: 75, icon: '🐘' },
-        { name: 'Git', level: 90, icon: '📝' },
-        { name: 'Docker', level: 70, icon: '🐳' },
-        { name: 'AWS', level: 65, icon: '☁️' },
-        { name: 'Firebase', level: 75, icon: '🔥' },
+        { name: 'Altium Designer', level: 85, icon: '🔧' },
+        { name: 'PCB Design', level: 90, icon: '🔌' },
+        { name: 'Arduino IDE', level: 95, icon: '💡' },
+        { name: 'Visual Studio', level: 85, icon: '📝' },
+        { name: 'Git/GitHub', level: 90, icon: '🔀' },
+        { name: 'TinkerCAD', level: 80, icon: '🎯' },
       ]
     }
   ];
 
   const codingProfiles = [
-    { name: 'LeetCode', username: 'aadarsh_ka', solved: '250+', url: 'https://leetcode.com/aadarsh_ka' },
-    { name: 'HackerRank', username: 'aadarsh_ka', stars: '5⭐', url: 'https://hackerrank.com/aadarsh_ka' },
-    { name: 'GeeksforGeeks', username: 'aadarsh_ka', score: '1500+', url: 'https://auth.geeksforgeeks.org/user/aadarsh_ka' },
-    { name: 'CodeChef', username: 'aadarsh_ka', rating: '1800+', url: 'https://codechef.com/users/aadarsh_ka' },
+    { name: 'GitHub', username: 'aadarsh2812', solved: '15+ Projects', url: 'https://github.com/aadarsh2812' },
+    { name: 'IEEE Xplore', username: 'Aadarsh K A S', stars: '1 Publication', url: 'https://ieeexplore.ieee.org' },
+    { name: 'LinkedIn', username: 'aadarsh-k-a-s', score: 'Professional', url: 'https://linkedin.com/in/aadarsh-k-a-s-771558293' },
+    { name: 'ResearchGate', username: 'Aadarsh KAS', rating: 'Researcher', url: 'https://researchgate.net' },
   ];
 
   const articles = [
     {
-      title: 'Building Scalable React Applications with TypeScript',
-      platform: 'Medium',
-      url: 'https://medium.com/@aadarsh/react-typescript',
+      title: 'Smart Wheelchair Based on Voice Recognition for Physically Disabled People',
+      platform: 'IEEE',
+      url: 'https://ieeexplore.ieee.org',
       date: '2024'
     },
     {
-      title: 'Advanced CSS Animations and Micro-Interactions',
-      platform: 'Dev.to',
-      url: 'https://dev.to/aadarsh/css-animations',
-      date: '2024'
+      title: 'MuscleSync: Real-Time EMG-Based Control System',
+      platform: 'Research Project',
+      url: '#',
+      date: '2025'
     },
     {
-      title: 'Modern State Management in React Applications',
-      platform: 'Medium',
-      url: 'https://medium.com/@aadarsh/state-management',
-      date: '2023'
+      title: 'IoT-Based Gut Health Management System',
+      platform: 'Research Project',
+      url: '#',
+      date: '2025'
     }
+  ];
+
+  const certificates = [
+    { name: 'Digital Circuits - NPTEL (IIT Kharagpur)', year: '2024' },
+    { name: 'Electronics Foundation - LinkedIn', year: '2024' },
+    { name: 'Data Visualization - Kaggle', year: '2024' },
+    { name: 'PCB Design Course - Altium Education', year: '2024' },
+    { name: 'All From Basics to GenAI Practice - NVIDIA', year: '2024' },
+    { name: 'AWS IoT - Amazon Web Services', year: '2024' },
   ];
 
   const containerVariants = {
@@ -104,8 +113,8 @@ const Skills = () => {
             <span className="text-gradient-primary">Skills & Profiles</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            My technical expertise spans across various technologies and platforms. 
-            Here's an overview of my skills and coding profiles.
+            My technical expertise in embedded systems, IoT development, and PCB design. 
+            Published IEEE researcher with hands-on experience in defense applications.
           </p>
         </motion.div>
 
@@ -158,7 +167,7 @@ const Skills = () => {
           animate="visible"
           className="mb-20"
         >
-          <h2 className="text-3xl font-bold text-center mb-12">Coding Profiles</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Professional Profiles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {codingProfiles.map((profile) => (
               <motion.div key={profile.name} variants={itemVariants} whileHover={{ y: -5 }}>
@@ -181,13 +190,14 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* Featured Articles Section */}
+        {/* Featured Articles & Publications Section */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
+          className="mb-20"
         >
-          <h2 className="text-3xl font-bold text-center mb-12">Featured Articles</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Publications & Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {articles.map((article) => (
               <motion.div key={article.title} variants={itemVariants} whileHover={{ y: -5 }}>
@@ -204,6 +214,27 @@ const Skills = () => {
                       </CardDescription>
                     </CardHeader>
                   </a>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Certificates Section */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">Certifications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certificates.map((cert) => (
+              <motion.div key={cert.name} variants={itemVariants}>
+                <Card className="glass border-border/50">
+                  <CardHeader>
+                    <CardTitle className="text-lg">{cert.name}</CardTitle>
+                    <CardDescription>{cert.year}</CardDescription>
+                  </CardHeader>
                 </Card>
               </motion.div>
             ))}
