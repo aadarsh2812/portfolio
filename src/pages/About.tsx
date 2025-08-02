@@ -64,7 +64,7 @@ const About = () => {
               <h2 className="text-3xl font-bold">Who Am I?</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Hello! I'm Aadarsh K A, a passionate creative developer with a deep love for 
+                  Hello! I'm Aadarsh K A S, a passionate creative developer with a deep love for 
                   crafting exceptional digital experiences. With over 3 years of experience in 
                   web development, I specialize in creating modern, responsive, and user-friendly 
                   applications that solve real-world problems.
@@ -110,7 +110,7 @@ const About = () => {
               <div className="relative glass rounded-2xl p-2 border border-border/50">
                 <img
                   src="/api/placeholder/500/600"
-                  alt="Aadarsh K A"
+                  alt="Aadarsh K A S"
                   className="w-full h-auto rounded-xl object-cover"
                 />
               </div>

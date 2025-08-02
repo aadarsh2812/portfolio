@@ -48,7 +48,7 @@ const Home = () => {
           <div className="space-y-8">
             <motion.div variants={itemVariants} className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                <span className="text-gradient-primary">Aadarsh K A</span>
+                <span className="text-gradient-primary">Aadarsh K A S</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">
                 Creative Developer

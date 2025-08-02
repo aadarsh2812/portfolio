@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-gradient-primary">
-            Aadarsh K A
+            Aadarsh K A S
           </Link>
 
           {/* Navigation Links */}
