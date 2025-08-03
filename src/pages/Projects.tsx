@@ -8,57 +8,57 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.',
+      title: 'MuscleSync - Real-Time EMG Control System',
+      description: 'Designed an EMG signal processing system using AI and embedded systems to enable real-time control, achieving 85% signal accuracy. Techniques adaptable for secure UAV operator interfaces in defense applications.',
       image: '/api/placeholder/400/300',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
-      liveDemo: 'https://example.com',
-      github: 'https://github.com/aadarsh/ecommerce'
+      technologies: ['AI/ML', 'Embedded Systems', 'Signal Processing', 'Python', 'C'],
+      liveDemo: '#',
+      github: 'https://github.com/aadarsh2812/musclesync'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+      title: 'Gut Health Management System',
+      description: 'Engineered a Raspberry Pi-based IoT system for real-time sensor integration and cloud-based AI analysis, achieving 80% detection accuracy. Adaptable for defense-grade environmental monitoring.',
       image: '/api/placeholder/400/300',
-      technologies: ['React', 'TypeScript', 'Socket.io', 'PostgreSQL', 'Express'],
-      liveDemo: 'https://example.com',
-      github: 'https://github.com/aadarsh/taskmanager'
+      technologies: ['Raspberry Pi', 'IoT', 'Cloud Computing', 'AI Analysis', 'Python'],
+      liveDemo: '#',
+      github: 'https://github.com/aadarsh2812/gut-health-system'
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'A responsive weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.',
+      title: 'Obstacle Avoidance Bot',
+      description: 'Developed an Arduino UNO-based navigation system with ultrasonic/IR sensors and PID control in Embedded C, achieving 95% detection accuracy. Applicable to anti-drone collision avoidance systems.',
       image: '/api/placeholder/400/300',
-      technologies: ['Vue.js', 'D3.js', 'OpenWeather API', 'Chart.js'],
-      liveDemo: 'https://example.com',
-      github: 'https://github.com/aadarsh/weather'
+      technologies: ['Arduino UNO', 'Embedded C', 'Ultrasonic Sensors', 'PID Control', 'IR Sensors'],
+      liveDemo: '#',
+      github: 'https://github.com/aadarsh2812/obstacle-avoidance-bot'
     },
     {
       id: 4,
-      title: 'Social Media Analytics',
-      description: 'A comprehensive analytics platform for social media metrics with real-time data visualization and reporting features.',
+      title: 'ESP32 Audio Monitoring System',
+      description: 'Developed an ESP32-based audio monitoring system with Azure data integration and AI-driven pattern analysis for real-time alerts during AIOT internship at Spinacle Technologies.',
       image: '/api/placeholder/400/300',
-      technologies: ['Python', 'Django', 'React', 'PostgreSQL', 'Redis'],
-      liveDemo: 'https://example.com',
-      github: 'https://github.com/aadarsh/analytics'
+      technologies: ['ESP32', 'Azure', 'Audio Processing', 'Embedded C', 'Python'],
+      liveDemo: '#',
+      github: 'https://github.com/aadarsh2812/esp32-audio-monitor'
     },
     {
       id: 5,
-      title: 'Portfolio Website',
-      description: 'A modern, animated portfolio website built with React, Three.js, and Framer Motion featuring 3D elements and smooth animations.',
+      title: 'LED Sequence PCB Design',
+      description: 'Designed a compact PCB for an LED indicator using Altium, optimized for low-power defense systems. Applicable to UAV and anti-drone status displays.',
       image: '/api/placeholder/400/300',
-      technologies: ['React', 'Three.js', 'Framer Motion', 'TypeScript'],
-      liveDemo: 'https://example.com',
-      github: 'https://github.com/aadarsh/portfolio'
+      technologies: ['Altium Designer', 'PCB Design', 'Digital Electronics', 'Low-Power Design'],
+      liveDemo: '#',
+      github: 'https://github.com/aadarsh2812/led-sequence-pcb'
     },
     {
       id: 6,
-      title: 'Learning Management System',
-      description: 'An educational platform with course management, progress tracking, video streaming, and interactive quizzes.',
+      title: 'Gamma vs. Hadron Classification',
+      description: 'Built a K-Nearest Neighbors (KNN) classifier to distinguish gamma rays from hadrons using the MAGIC Gamma Telescope dataset, achieving ~80% accuracy with strong recall for gamma events.',
       image: '/api/placeholder/400/300',
-      technologies: ['Next.js', 'Prisma', 'Supabase', 'Tailwind CSS'],
-      liveDemo: 'https://example.com',
-      github: 'https://github.com/aadarsh/lms'
+      technologies: ['Python', 'KNN', 'Scikit-learn', 'Data Analysis', 'Machine Learning'],
+      liveDemo: '#',
+      github: 'https://github.com/aadarsh2812/gamma-hadron-classification'
     }
   ];
 
