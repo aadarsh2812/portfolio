@@ -129,16 +129,16 @@ const About = () => {
               className="grid grid-cols-3 gap-4 mt-8"
             >
               <div className="glass rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-primary">4+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="text-2xl font-bold text-primary">Fresher</div>
+                <div className="text-sm text-muted-foreground">Experience</div>
               </div>
               <div className="glass rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-primary">15+</div>
+                <div className="text-2xl font-bold text-primary">6+</div>
                 <div className="text-sm text-muted-foreground">Projects</div>
               </div>
               <div className="glass rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-primary">100%</div>
-                <div className="text-sm text-muted-foreground">Satisfaction</div>
+                <div className="text-2xl font-bold text-primary">10+</div>
+                <div className="text-sm text-muted-foreground">Hackathons</div>
               </div>
             </motion.div>
           </motion.div>

@@ -22,7 +22,6 @@ const Skills = () => {
         { name: 'C', level: 95, icon: '💻' },
         { name: 'Python', level: 90, icon: '🐍' },
         { name: 'Embedded C', level: 95, icon: '⚡' },
-        { name: 'Java', level: 80, icon: '☕' },
         { name: 'Machine Learning', level: 75, icon: '🤖' },
         { name: 'IoT Development', level: 90, icon: '🌐' },
       ]
@@ -31,40 +30,21 @@ const Skills = () => {
       title: 'Tools & Design',
       skills: [
         { name: 'Altium Designer', level: 85, icon: '🔧' },
-        { name: 'PCB Design', level: 90, icon: '🔌' },
         { name: 'Arduino IDE', level: 95, icon: '💡' },
         { name: 'Visual Studio', level: 85, icon: '📝' },
         { name: 'Git/GitHub', level: 90, icon: '🔀' },
-        { name: 'TinkerCAD', level: 80, icon: '🎯' },
       ]
     }
   ];
 
-  const codingProfiles = [
-    { name: 'GitHub', username: 'aadarsh2812', solved: '15+ Projects', url: 'https://github.com/aadarsh2812' },
-    { name: 'IEEE Xplore', username: 'Aadarsh K A S', stars: '1 Publication', url: 'https://ieeexplore.ieee.org' },
-    { name: 'LinkedIn', username: 'aadarsh-k-a-s', score: 'Professional', url: 'https://linkedin.com/in/aadarsh-k-a-s-771558293' },
-    { name: 'ResearchGate', username: 'Aadarsh KAS', rating: 'Researcher', url: 'https://researchgate.net' },
-  ];
+  const codingProfiles = [];
 
   const articles = [
     {
       title: 'Smart Wheelchair Based on Voice Recognition for Physically Disabled People',
-      platform: 'IEEE',
-      url: 'https://ieeexplore.ieee.org',
+      platform: 'IEEE Xplore',
+      url: 'https://ieeexplore.ieee.org/document/10780365',
       date: '2024'
-    },
-    {
-      title: 'MuscleSync: Real-Time EMG-Based Control System',
-      platform: 'Research Project',
-      url: '#',
-      date: '2025'
-    },
-    {
-      title: 'IoT-Based Gut Health Management System',
-      platform: 'Research Project',
-      url: '#',
-      date: '2025'
     }
   ];
 
@@ -160,35 +140,6 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* Coding Profiles Section */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="mb-20"
-        >
-          <h2 className="text-3xl font-bold text-center mb-12">Professional Profiles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {codingProfiles.map((profile) => (
-              <motion.div key={profile.name} variants={itemVariants} whileHover={{ y: -5 }}>
-                <Card className="glass border-border/50 hover:glow-primary transition-smooth cursor-pointer">
-                  <a href={profile.url} target="_blank" rel="noopener noreferrer" className="block p-6">
-                    <div className="text-center space-y-2">
-                      <h3 className="font-bold text-lg">{profile.name}</h3>
-                      <p className="text-muted-foreground">@{profile.username}</p>
-                      <div className="flex items-center justify-center gap-2">
-                        <Badge variant="secondary">
-                          {profile.solved || profile.stars || profile.score || profile.rating}
-                        </Badge>
-                        <ExternalLink className="h-4 w-4 text-muted-foreground" />
-                      </div>
-                    </div>
-                  </a>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Featured Articles & Publications Section */}
         <motion.div
@@ -197,7 +148,7 @@ const Skills = () => {
           animate="visible"
           className="mb-20"
         >
-          <h2 className="text-3xl font-bold text-center mb-12">Publications & Projects</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Publications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {articles.map((article) => (
               <motion.div key={article.title} variants={itemVariants} whileHover={{ y: -5 }}>

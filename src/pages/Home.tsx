@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import TechIcons from '@/components/3D/TechIcons';
 
@@ -31,7 +31,7 @@ const Home = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/aadarsh2812', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/aadarshkas2812', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/aadarsh', label: 'Twitter' },
+    { icon: Instagram, href: 'https://www.instagram.com/i_.aadarsh/', label: 'Instagram' },
   ];
 
   return (

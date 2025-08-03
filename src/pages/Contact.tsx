@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -47,9 +47,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: Github, label: 'GitHub', href: 'https://github.com/aadarsh2812', username: '@aadarsh2812' },
     { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/aadarsh-k-a-s-771558293', username: '/in/aadarsh-k-a-s-771558293' },
-    { icon: Twitter, label: 'Twitter', href: 'https://twitter.com/aadarsh', username: '@aadarsh' },
-    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/aadarsh', username: '@aadarsh' },
-    { icon: Youtube, label: 'YouTube', href: 'https://youtube.com/@aadarsh', username: '@aadarsh' },
+    { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/i_.aadarsh/', username: '@i_.aadarsh' },
   ];
 
   const containerVariants = {
