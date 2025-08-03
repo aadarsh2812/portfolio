@@ -19,7 +19,7 @@ const Projects = () => {
       id: 2,
       title: 'Gut Health Management System',
       description: 'Engineered a Raspberry Pi-based IoT system for real-time sensor integration and cloud-based AI analysis, achieving 80% detection accuracy. Adaptable for defense-grade environmental monitoring.',
-      image: '/api/placeholder/400/300',
+      image: '/lovable-uploads/b794bb6b-52e0-41dd-bd79-a9ad7bb6a9c5.png',
       technologies: ['Raspberry Pi', 'IoT', 'Cloud Computing', 'AI Analysis', 'Python'],
       liveDemo: '#',
       github: 'https://github.com/aadarsh2812/gut-health-system'
