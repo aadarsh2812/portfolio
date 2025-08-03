@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const Navigation = () => {
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { path: '/', label: 'Home' },
@@ -50,13 +53,35 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu */}
           <div className="md:hidden">
-            <button className="text-foreground hover:text-primary transition-smooth">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <button className="text-foreground hover:text-primary transition-smooth">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-80">
+                <div className="flex flex-col space-y-6 mt-8">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setIsOpen(false)}
+                      className={`text-lg font-medium transition-smooth ${
+                        location.pathname === item.path
+                          ? 'text-primary'
+                          : 'text-muted-foreground hover:text-foreground'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
