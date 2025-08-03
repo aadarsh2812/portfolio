@@ -46,7 +46,7 @@ const Projects = () => {
       id: 5,
       title: 'LED Sequence PCB Design',
       description: 'Designed a compact PCB for an LED indicator using Altium, optimized for low-power defense systems. Applicable to UAV and anti-drone status displays.',
-      image: '/api/placeholder/400/300',
+      image: '/lovable-uploads/84792fba-d764-4b05-aad1-2de1ac583a3a.png',
       technologies: ['Altium Designer', 'PCB Design', 'Digital Electronics', 'Low-Power Design'],
       liveDemo: '#',
       github: 'https://github.com/aadarsh2812/led-sequence-pcb'
