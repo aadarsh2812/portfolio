@@ -12,7 +12,6 @@ const Skills = () => {
         { name: 'Raspberry Pi', level: 90, icon: '🍓' },
         { name: 'ESP32/ESP8266', level: 95, icon: '📡' },
         { name: 'STM32', level: 85, icon: '💾' },
-        { name: 'TI Launchpad', level: 80, icon: '🚀' },
         { name: 'DSP Processor', level: 75, icon: '📊' },
       ]
     },
