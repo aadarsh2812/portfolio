@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -11,54 +9,42 @@ const Projects = () => {
       title: 'MuscleSync - Real-Time EMG Control System',
       description: 'Designed an EMG signal processing system using AI and embedded systems to enable real-time control, achieving 85% signal accuracy. Techniques adaptable for secure UAV operator interfaces in defense applications.',
       image: '/api/placeholder/400/300',
-      technologies: ['AI/ML', 'Embedded Systems', 'Signal Processing', 'Python', 'C'],
-      liveDemo: '#',
-      github: 'https://github.com/aadarsh2812/musclesync'
+      technologies: ['AI', 'Embedded Systems', 'Signal Processing', 'Python', 'C']
     },
     {
       id: 2,
       title: 'Gut Health Management System',
       description: 'Engineered a Raspberry Pi-based IoT system for real-time sensor integration and cloud-based AI analysis, achieving 80% detection accuracy. Adaptable for defense-grade environmental monitoring.',
       image: '/lovable-uploads/b794bb6b-52e0-41dd-bd79-a9ad7bb6a9c5.png',
-      technologies: ['Raspberry Pi', 'IoT', 'Cloud Computing', 'AI Analysis', 'Python'],
-      liveDemo: '#',
-      github: 'https://github.com/aadarsh2812/gut-health-system'
+      technologies: ['Raspberry Pi', 'IoT', 'Cloud Computing', 'AI Analysis', 'Python']
     },
     {
       id: 3,
       title: 'Obstacle Avoidance Bot',
       description: 'Developed an Arduino UNO-based navigation system with ultrasonic/IR sensors and PID control in Embedded C, achieving 95% detection accuracy. Applicable to anti-drone collision avoidance systems.',
       image: '/api/placeholder/400/300',
-      technologies: ['Arduino UNO', 'Embedded C', 'Ultrasonic Sensors', 'PID Control', 'IR Sensors'],
-      liveDemo: '#',
-      github: 'https://github.com/aadarsh2812/obstacle-avoidance-bot'
+      technologies: ['Arduino UNO', 'Embedded C', 'Ultrasonic Sensors', 'PID Control', 'IR Sensors']
     },
     {
       id: 4,
       title: 'ESP32 Audio Monitoring System',
       description: 'Developed an ESP32-based audio monitoring system with Azure data integration and AI-driven pattern analysis for real-time alerts during AIOT internship at Spinacle Technologies.',
       image: '/api/placeholder/400/300',
-      technologies: ['ESP32', 'Azure', 'Audio Processing', 'Embedded C', 'Python'],
-      liveDemo: '#',
-      github: 'https://github.com/aadarsh2812/esp32-audio-monitor'
+      technologies: ['ESP32', 'Azure', 'Audio Processing', 'Embedded C', 'Python']
     },
     {
       id: 5,
       title: 'LED Sequence PCB Design',
       description: 'Designed a compact PCB for an LED indicator using Altium, optimized for low-power defense systems. Applicable to UAV and anti-drone status displays.',
       image: '/lovable-uploads/84792fba-d764-4b05-aad1-2de1ac583a3a.png',
-      technologies: ['Altium Designer', 'PCB Design', 'Digital Electronics', 'Low-Power Design'],
-      liveDemo: '#',
-      github: 'https://github.com/aadarsh2812/led-sequence-pcb'
+      technologies: ['Altium Designer', 'PCB Design', 'Digital Electronics', 'Low-Power Design']
     },
     {
       id: 6,
       title: 'Gamma vs. Hadron Classification',
       description: 'Built a K-Nearest Neighbors (KNN) classifier to distinguish gamma rays from hadrons using the MAGIC Gamma Telescope dataset, achieving ~80% accuracy with strong recall for gamma events.',
       image: '/api/placeholder/400/300',
-      technologies: ['Python', 'KNN', 'Scikit-learn', 'Data Analysis', 'Machine Learning'],
-      liveDemo: '#',
-      github: 'https://github.com/aadarsh2812/gamma-hadron-classification'
+      technologies: ['Python', 'KNN', 'Scikit-learn', 'Data Analysis', 'Machine Learning']
     }
   ];
 
@@ -133,28 +119,13 @@ const Projects = () => {
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="space-y-4">
+                <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <Badge key={tech} variant="secondary" className="text-xs">
                         {tech}
                       </Badge>
                     ))}
-                  </div>
-
-                  <div className="flex gap-3">
-                    <Button asChild size="sm" className="flex-1">
-                      <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
-                    <Button asChild variant="outline" size="sm" className="flex-1">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
                   </div>
                 </CardContent>
               </Card>
