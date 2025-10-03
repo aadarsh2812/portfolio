@@ -12,7 +12,6 @@ const Skills = () => {
         { name: 'Raspberry Pi', level: 90, icon: '🍓' },
         { name: 'ESP32/ESP8266', level: 95, icon: '📡' },
         { name: 'STM32', level: 85, icon: '💾' },
-        { name: 'DSP Processor', level: 75, icon: '📊' },
       ]
     },
     {
@@ -21,8 +20,7 @@ const Skills = () => {
         { name: 'C', level: 95, icon: '💻' },
         { name: 'Python', level: 90, icon: '🐍' },
         { name: 'Embedded C', level: 95, icon: '⚡' },
-        { name: 'Machine Learning', level: 75, icon: '🤖' },
-        { name: 'IoT Development', level: 90, icon: '🌐' },
+        { name: 'Verilog', level: 85, icon: '🔌' },
       ]
     },
     {
