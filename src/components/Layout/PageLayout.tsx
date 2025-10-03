@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import Navigation from './Navigation';
 import ParticleBackground from './ParticleBackground';
+import Footer from './Footer';
 
 interface PageLayoutProps {
   children: ReactNode;
@@ -28,6 +29,8 @@ const PageLayout = ({ children }: PageLayoutProps) => {
       >
         {children}
       </motion.main>
+      
+      <Footer />
     </div>
   );
 };
