@@ -137,57 +137,6 @@ const Skills = () => {
           </div>
         </motion.div>
 
-
-        {/* Featured Articles & Publications Section */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="mb-20"
-        >
-          <h2 className="text-3xl font-bold text-center mb-12">Publications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {articles.map((article) => (
-              <motion.div key={article.title} variants={itemVariants} whileHover={{ y: -5 }}>
-                <Card className="glass border-border/50 hover:glow-primary transition-smooth h-full">
-                  <a href={article.url} target="_blank" rel="noopener noreferrer" className="block h-full">
-                    <CardHeader>
-                      <div className="flex justify-between items-start gap-2">
-                        <CardTitle className="text-lg leading-tight">{article.title}</CardTitle>
-                        <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
-                      </div>
-                      <CardDescription className="flex justify-between">
-                        <span>{article.platform}</span>
-                        <span>{article.date}</span>
-                      </CardDescription>
-                    </CardHeader>
-                  </a>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Certificates Section */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <h2 className="text-3xl font-bold text-center mb-12">Certifications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certificates.map((cert) => (
-              <motion.div key={cert.name} variants={itemVariants}>
-                <Card className="glass border-border/50">
-                  <CardHeader>
-                    <CardTitle className="text-lg">{cert.name}</CardTitle>
-                    <CardDescription>{cert.year}</CardDescription>
-                  </CardHeader>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </div>
   );
