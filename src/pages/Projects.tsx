@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import muscleSyncImage from '@/assets/musclesync.png';
 
 const Projects = () => {
   const projects = [
@@ -8,7 +9,7 @@ const Projects = () => {
       id: 1,
       title: 'MuscleSync - Real-Time EMG Control System',
       description: 'Designed an EMG signal processing system using AI and embedded systems to enable real-time control, achieving 85% signal accuracy. Techniques adaptable for secure UAV operator interfaces in defense applications.',
-      image: '/api/placeholder/400/300',
+      image: muscleSyncImage,
       technologies: ['AI', 'Embedded Systems', 'Signal Processing', 'Python', 'C']
     },
     {
