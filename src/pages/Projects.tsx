@@ -25,7 +25,7 @@ const Projects = () => {
     {
       id: 3,
       title: 'Obstacle Avoidance Bot',
-      description: 'Developed an Arduino UNO-based navigation system with ultrasonic/IR sensors and PID control in Embedded C, achieving 95% detection accuracy. Applicable to anti-drone collision avoidance systems.',
+      description: 'Developed an Arduino UNO-based navigation system with ultrasonic/IR sensors in Embedded C, achieving 95% detection accuracy. Applicable to anti-drone collision avoidance systems.',
       image: obstacleBotImage,
       technologies: ['Arduino UNO', 'Embedded C', 'Ultrasonic Sensors', 'IR Sensors']
     },
