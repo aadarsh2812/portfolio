@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import muscleSyncImage from '@/assets/musclesync.png';
+import obstacleBotImage from '@/assets/obstacle-bot.png';
 
 const Projects = () => {
   const projects = [
@@ -23,8 +24,8 @@ const Projects = () => {
       id: 3,
       title: 'Obstacle Avoidance Bot',
       description: 'Developed an Arduino UNO-based navigation system with ultrasonic/IR sensors and PID control in Embedded C, achieving 95% detection accuracy. Applicable to anti-drone collision avoidance systems.',
-      image: '/api/placeholder/400/300',
-      technologies: ['Arduino UNO', 'Embedded C', 'Ultrasonic Sensors', 'PID Control', 'IR Sensors']
+      image: obstacleBotImage,
+      technologies: ['Arduino UNO', 'Embedded C', 'Ultrasonic Sensors', 'IR Sensors']
     },
     {
       id: 4,
