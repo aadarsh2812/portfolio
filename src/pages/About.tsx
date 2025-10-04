@@ -61,31 +61,16 @@ const About = () => {
           {/* Content */}
           <motion.div variants={itemVariants} className="space-y-8">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold">Creative Developer from Chennai</h2>
+              <h2 className="text-3xl font-bold">Electronics Engineering Student</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Hello! I'm Aadarsh K A S, a passionate B.E. Electronics Engineering student 
-                  specializing in IoT, embedded systems, and PCB design for secure, real-time defense 
-                  applications. Currently pursuing my degree at Rajalakshmi Institute of Technology 
-                  with a CGPA of 8.7/10.0.
+                  Hello! I'm Aadarsh K A S, an Electronics Engineering student at Rajalakshmi Institute of Technology with a deep focus on creating secure and reliable embedded systems.
                 </p>
                 <p>
-                  My journey in electronics and embedded systems started during my college years when I 
-                  discovered the power of IoT and embedded technologies to solve real-world problems. 
-                  I've been privileged to intern at Spinacle Technologies, where I developed mission-critical 
-                  IoT systems and worked on healthcare devices using embedded systems.
+                  My passion lies in building solutions for high-stakes environments. This was put into practice during my internship at Spinacle Technologies, where I developed mission-critical IoT systems for healthcare. I further deepened my understanding of high-reliability systems at BigBangBoom Solutions, gaining valuable insights into quality assurance and technology standards for defense-grade drone systems. My commitment to impactful technology is also reflected in my IEEE-published research on a voice-controlled smart wheelchair.
                 </p>
                 <p>
-                  As a published researcher in IEEE, I've presented my work on smart wheelchair systems 
-                  based on voice recognition for physically disabled people. My expertise spans across 
-                  IoT development, PCB design using Altium, and embedded programming with various 
-                  development boards including Arduino, Raspberry Pi, STM32, and ESP32.
-                </p>
-                <p>
-                  I'm passionate about contributing to innovative defense technologies and anti-drone 
-                  systems. When I'm not working on embedded projects, you can find me leading IoT 
-                  workshops, mentoring juniors, or exploring new technologies in machine learning 
-                  and digital electronics.
+                  My technical expertise includes full-stack IoT development, PCB design with Altium, and programming on platforms like Arduino, Raspberry Pi, STM32, and ESP32. I am driven to apply my skills to solve complex engineering problems and enjoy sharing my knowledge by leading workshops and mentoring fellow students.
                 </p>
               </div>
             </div>
