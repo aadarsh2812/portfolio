@@ -137,8 +137,8 @@ const About = () => {
                 <div className="text-sm text-muted-foreground">Projects</div>
               </div>
               <div className="glass rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-primary">10+</div>
-                <div className="text-sm text-muted-foreground">Hackathons</div>
+                <div className="text-xl font-bold text-primary">VLSI & AI</div>
+                <div className="text-sm text-muted-foreground">Enthusiast</div>
               </div>
             </motion.div>
           </motion.div>
