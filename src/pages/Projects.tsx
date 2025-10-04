@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import muscleSyncImage from '@/assets/musclesync.png';
 import obstacleBotImage from '@/assets/obstacle-bot.png';
 import gammaClassificationImage from '@/assets/gamma-classification.png';
+import esp32AudioImage from '@/assets/esp32-audio.jpg';
 
 const Projects = () => {
   const projects = [
@@ -32,7 +33,7 @@ const Projects = () => {
       id: 4,
       title: 'ESP32 Audio Monitoring System',
       description: 'Developed an ESP32-based audio monitoring system with Azure data integration and AI-driven pattern analysis for real-time alerts during AIOT internship at Spinacle Technologies.',
-      image: '/api/placeholder/400/300',
+      image: esp32AudioImage,
       technologies: ['ESP32', 'Azure', 'Audio Processing', 'Embedded C', 'Python']
     },
     {
