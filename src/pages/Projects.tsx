@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import muscleSyncImage from '@/assets/musclesync.png';
 import obstacleBotImage from '@/assets/obstacle-bot.png';
+import gammaClassificationImage from '@/assets/gamma-classification.png';
 
 const Projects = () => {
   const projects = [
@@ -45,7 +46,7 @@ const Projects = () => {
       id: 6,
       title: 'Gamma vs. Hadron Classification',
       description: 'Built a K-Nearest Neighbors (KNN) classifier to distinguish gamma rays from hadrons using the MAGIC Gamma Telescope dataset, achieving ~80% accuracy with strong recall for gamma events.',
-      image: '/api/placeholder/400/300',
+      image: gammaClassificationImage,
       technologies: ['Python', 'KNN', 'Scikit-learn', 'Data Analysis', 'Machine Learning']
     }
   ];
