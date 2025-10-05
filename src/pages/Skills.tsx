@@ -95,43 +95,54 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Skills Section */}
+
+
+        {/* Technical Expertise Section */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="mb-20"
         >
-          <h2 className="text-3xl font-bold text-center mb-12">Technical Skills</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {skillCategories.map((category, categoryIndex) => (
-              <motion.div key={category.title} variants={itemVariants}>
-                <Card className="glass border-border/50 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-center">{category.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    {category.skills.map((skill) => (
-                      <div key={skill.name} className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <span className="flex items-center gap-2 font-medium">
-                            <span className="text-lg">{skill.icon}</span>
-                            {skill.name}
-                          </span>
-                          <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <motion.div
-                            className="bg-gradient-primary h-2 rounded-full"
-                            initial={{ width: 0 }}
-                            animate={{ width: `${skill.level}%` }}
-                            transition={{ duration: 1, delay: categoryIndex * 0.2 + 0.5 }}
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </CardContent>
-                </Card>
+          <h2 className="text-3xl font-bold text-center mb-12">Technical Expertise</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {['IoT', 'Embedded Systems', 'Sensor Fusion', 'PCB Design', 'Digital Electronics', 'Drone Assembly', 'Machine Learning'].map((expertise) => (
+              <motion.div key={expertise} variants={itemVariants}>
+                <Badge variant="secondary" className="text-lg px-4 py-2">{expertise}</Badge>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Tools Section */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="mb-20"
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">Tools</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {['Altium', 'Visual Studio', 'Scilab', 'Arduino IDE', 'Multisim', 'TinkerCAD', 'Webench', 'TI Developer Zone', 'Logic Circuit Simulator'].map((tool) => (
+              <motion.div key={tool} variants={itemVariants}>
+                <Badge variant="secondary" className="text-lg px-4 py-2">{tool}</Badge>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Version Control Section */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="mb-20"
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">Version Control</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {['Git', 'GitHub'].map((tool) => (
+              <motion.div key={tool} variants={itemVariants}>
+                <Badge variant="secondary" className="text-lg px-4 py-2">{tool}</Badge>
               </motion.div>
             ))}
           </div>

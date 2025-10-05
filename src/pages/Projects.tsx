@@ -5,6 +5,8 @@ import muscleSyncImage from '@/assets/musclesync.png';
 import obstacleBotImage from '@/assets/obstacle-bot.png';
 import gammaClassificationImage from '@/assets/gamma-classification.png';
 import esp32AudioImage from '@/assets/esp32-audio.jpg';
+import Gut_tracker from '@/assets/Gut_tracker.png';
+import Ledseq from '@/assets/Ledsequence.jpg';  
 
 const Projects = () => {
   const projects = [
@@ -19,13 +21,13 @@ const Projects = () => {
       id: 2,
       title: 'Gut Health Management System',
       description: 'Engineered a Raspberry Pi-based IoT system for real-time sensor integration and cloud-based AI analysis, achieving 80% detection accuracy. Adaptable for defense-grade environmental monitoring.',
-      image: '/lovable-uploads/b794bb6b-52e0-41dd-bd79-a9ad7bb6a9c5.png',
+      image: Gut_tracker,
       technologies: ['Raspberry Pi', 'IoT', 'Cloud Computing', 'AI Analysis', 'Python']
     },
     {
       id: 3,
       title: 'Obstacle Avoidance Bot',
-      description: 'Developed an Arduino UNO-based navigation system with ultrasonic/IR sensors in Embedded C, achieving 95% detection accuracy. Applicable to anti-drone collision avoidance systems.',
+      description: 'Developed an Arduino UNO-based navigation system with ultrasonic/IR sensors in Embedded C, achieving 95% detection accuracy. Applicable to collision avoidance systems.',
       image: obstacleBotImage,
       technologies: ['Arduino UNO', 'Embedded C', 'Ultrasonic Sensors', 'IR Sensors']
     },
@@ -39,8 +41,9 @@ const Projects = () => {
     {
       id: 5,
       title: 'LED Sequence PCB Design',
-      description: 'Designed a compact PCB for an LED indicator using Altium, optimized for low-power defense systems. Applicable to UAV and anti-drone status displays.',
-      image: '/lovable-uploads/84792fba-d764-4b05-aad1-2de1ac583a3a.png',
+      description: `Designed a compact PCB for an LED indicator using Altium, optimized for systems. Applicable 
+      status displays.`,
+      image: Ledseq,
       technologies: ['Altium Designer', 'PCB Design', 'Digital Electronics', 'Low-Power Design']
     },
     {

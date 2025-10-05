@@ -16,16 +16,22 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    const subject = `New Contact Form Submission from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    
+    window.location.href = `mailto:kasaadarsh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    toast({
+      title: "Redirecting to your email client",
+      description: "Please complete sending your message.",
+    });
+
+    // Reset form after a short delay
     setTimeout(() => {
-      toast({
-        title: 'Message sent successfully!',
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
       setFormData({ name: '', email: '', message: '' });
       setIsSubmitting(false);
     }, 1000);
