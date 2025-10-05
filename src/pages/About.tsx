@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import profileImage from '@/assets/profile.jpg';
 
 const About = () => {
   const containerVariants = {
@@ -95,7 +96,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-25 group-hover:opacity-40 transition-opacity duration-300" />
               <div className="relative glass rounded-2xl p-2 border border-border/50">
                 <img
-                  src="/api/placeholder/500/600"
+                  src={profileImage}
                   alt="Aadarsh K A S"
                   className="w-full h-auto rounded-xl object-cover"
                 />
