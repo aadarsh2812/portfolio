@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
-const Skills = () => {
+const SkillsAndTestimonials = () => {
   const skillCategories = [
     {
       title: 'Embedded Systems',
@@ -106,7 +106,7 @@ const Skills = () => {
         >
           <h2 className="text-3xl font-bold text-center mb-12">Technical Expertise</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            {['IoT', 'Embedded Systems', 'Sensor Fusion', 'PCB Design', 'Digital Electronics', 'Drone Assembly', 'Machine Learning'].map((expertise) => (
+            {['IoT', 'Embedded Systems', 'Sensor Fusion', 'PCB Design', 'Digital Electronics', 'Drone Assembly', 'Machine Learning (BASICS) '].map((expertise) => (
               <motion.div key={expertise} variants={itemVariants}>
                 <Badge variant="secondary" className="text-lg px-4 py-2">{expertise}</Badge>
               </motion.div>
@@ -123,7 +123,7 @@ const Skills = () => {
         >
           <h2 className="text-3xl font-bold text-center mb-12">Tools</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Altium', 'Visual Studio', 'Scilab', 'Arduino IDE', 'Multisim', 'TinkerCAD', 'Webench', 'TI Developer Zone', 'Logic Circuit Simulator'].map((tool) => (
+            {['Altium', 'Visual Studio', 'Scilab', 'Arduino IDE', 'Multisim', 'Webench', 'TI Developer Zone', 'Logic Circuit Simulator'].map((tool) => (
               <motion.div key={tool} variants={itemVariants}>
                 <Badge variant="secondary" className="text-lg px-4 py-2">{tool}</Badge>
               </motion.div>
@@ -153,4 +153,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsAndTestimonials;

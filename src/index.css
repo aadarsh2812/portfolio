@@ -147,4 +147,8 @@ All colors MUST be HSL.
     backdrop-filter: blur(10px);
     border: 1px solid hsl(var(--border) / 0.5);
   }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
 }

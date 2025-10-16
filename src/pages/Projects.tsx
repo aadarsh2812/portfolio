@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import muscleSyncImage from '@/assets/musclesync.png';
-import obstacleBotImage from '@/assets/obstacle-bot.png';
-import gammaClassificationImage from '@/assets/gamma-classification.png';
-import esp32AudioImage from '@/assets/esp32-audio.jpg';
-import Gut_tracker from '@/assets/Gut_tracker.png';
-import Ledseq from '@/assets/Ledsequence.jpg';  
+import muscleSyncImage from '@/assets/musclesync.webp';
+import obstacleBotImage from '@/assets/obstacle-bot.webp';
+import gammaClassificationImage from '@/assets/gamma-classification.webp';
+import esp32AudioImage from '@/assets/esp32-audio.webp';
+import Gut_tracker from '@/assets/Gut_tracker.webp';
+import Ledseq from '@/assets/Ledsequence.webp';  
+import Athelet from '@/assets/Athelet.webp';
+import glyco from '@/assets/glyco.webp';
 
 const Projects = () => {
   const projects = [
@@ -19,27 +21,42 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: 'GlycoScan: Non-Contact Eye Pressure Monitoring System',
+      description: 'Portable eye pressure measuring device for glaucoma patients.',
+      image: glyco,
+      technologies: ['Reflection Sensors (ADPD144RI)', 'IoT', 'Infrared Camera', 'Python']
+    },
+    {
+      id: 3,
+      title: 'Proactive Athlete Health: Injury Prediction & Performance Enhancement System',
+      description: 'An intelligent wearable solution that uses multi-sensor IoT data and RNN models to predict athletic injuries in real time.',
+      image: Athelet,
+      technologies: ['RNN', 'IoT', 'Infrared Camera', 'Python']
+    },
+    
+     {
+      id: 3,
       title: 'Gut Health Management System',
       description: 'Engineered a Raspberry Pi-based IoT system for real-time sensor integration and cloud-based AI analysis, achieving 80% detection accuracy. Adaptable for defense-grade environmental monitoring.',
       image: Gut_tracker,
       technologies: ['Raspberry Pi', 'IoT', 'Cloud Computing', 'AI Analysis', 'Python']
     },
     {
-      id: 3,
+      id: 4,
       title: 'Obstacle Avoidance Bot',
       description: 'Developed an Arduino UNO-based navigation system with ultrasonic/IR sensors in Embedded C, achieving 95% detection accuracy. Applicable to collision avoidance systems.',
       image: obstacleBotImage,
       technologies: ['Arduino UNO', 'Embedded C', 'Ultrasonic Sensors', 'IR Sensors']
     },
     {
-      id: 4,
+      id: 5,
       title: 'ESP32 Audio Monitoring System',
       description: 'Developed an ESP32-based audio monitoring system with Azure data integration and AI-driven pattern analysis for real-time alerts during AIOT internship at Spinacle Technologies.',
       image: esp32AudioImage,
       technologies: ['ESP32', 'Azure', 'Audio Processing', 'Embedded C', 'Python']
     },
     {
-      id: 5,
+      id: 6,
       title: 'LED Sequence PCB Design',
       description: `Designed a compact PCB for an LED indicator using Altium, optimized for systems. Applicable 
       status displays.`,
@@ -47,7 +64,7 @@ const Projects = () => {
       technologies: ['Altium Designer', 'PCB Design', 'Digital Electronics', 'Low-Power Design']
     },
     {
-      id: 6,
+      id: 7,
       title: 'Gamma vs. Hadron Classification',
       description: 'Built a K-Nearest Neighbors (KNN) classifier to distinguish gamma rays from hadrons using the MAGIC Gamma Telescope dataset, achieving ~80% accuracy with strong recall for gamma events.',
       image: gammaClassificationImage,

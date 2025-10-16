@@ -50,18 +50,16 @@ const Home = () => {
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 <span className="text-gradient-primary">Aadarsh K A S</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">
+              <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
                 Electronics Engineering Student & IoT Developer
               </h2>
             </motion.div>
 
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0"
+              className="text-lg md:text-xl text-foreground max-w-2xl mx-auto lg:mx-0"
             >
-              Passionate B.E. Electronics Engineering student specializing in IoT, embedded systems, 
-              and PCB design for secure, real-time defense applications. Published researcher in IEEE 
-              with hands-on experience in developing mission-critical IoT systems.
+             Through an integration of advanced technology and creative intuition, I craft digital experiences that engage, enlighten, and endure—shaping designs that resonate with both intellect and emotion.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

@@ -63,7 +63,7 @@ const About = () => {
           <motion.div variants={itemVariants} className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold">Electronics Engineering Student</h2>
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-lg text-foreground leading-relaxed">
                 <p>
                   Hello! I'm Aadarsh K A S, an Electronics Engineering student at Rajalakshmi Institute of Technology with a deep focus on creating secure and reliable embedded systems.
                 </p>
@@ -116,15 +116,15 @@ const About = () => {
             >
               <div className="glass rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-primary">Fresher</div>
-                <div className="text-sm text-muted-foreground">Experience</div>
+                <div className="text-sm text-foreground">Experience</div>
               </div>
               <div className="glass rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-primary">6+</div>
-                <div className="text-sm text-muted-foreground">Projects</div>
+                <div className="text-sm text-foreground">Projects</div>
               </div>
               <div className="glass rounded-xl p-4 text-center">
-                <div className="text-xl font-bold text-primary">VLSI & AI</div>
-                <div className="text-sm text-muted-foreground">Enthusiast</div>
+                <div className="text-xl font-bold text-primary">Vibe Coder</div>
+                <div className="text-sm text-foreground">......</div>
               </div>
             </motion.div>
           </motion.div>

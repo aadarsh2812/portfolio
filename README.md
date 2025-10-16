@@ -1,4 +1,4 @@
-# Aadarsh Aura Portfolio
+# Aadarsh 
 
 This is the repository for my personal portfolio website, Aadarsh Aura. It is built with Vite, React, TypeScript, shadcn-ui, and Tailwind CSS.
 
