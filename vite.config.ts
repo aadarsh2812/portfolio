@@ -5,6 +5,10 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // When deploying to GitHub Pages for a repository named `portfolio`
+  // set the base to the repo name so built asset links are correct.
+  // If you deploy to a custom domain or user/organization page, change/remove this.
+  base: '/portfolio/',
   server: {
     host: "::",
     port: 8080,
@@ -35,52 +39,7 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Create separate chunks for React and ReactDOM
-          if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/')) {
-            return 'react-vendor';
-          }
-          
-          // Split Three.js related packages
-          if (id.includes('node_modules/three/') || 
-              id.includes('node_modules/@react-three/fiber') || 
-              id.includes('node_modules/@react-three/drei')) {
-            // Further split Three.js into smaller chunks
-            if (id.includes('node_modules/three/examples/')) {
-              return 'three-examples';
-            }
-            if (id.includes('node_modules/@react-three/drei')) {
-              return 'drei-vendor';
-            }
-            if (id.includes('node_modules/@react-three/fiber')) {
-              return 'fiber-vendor';
-            }
-            return 'three-core';
-          }
-          
-          // Split Radix UI components into smaller chunks
-          if (id.includes('node_modules/@radix-ui/')) {
-            // Group similar components together
-            if (id.includes('dialog') || id.includes('popover') || id.includes('modal')) {
-              return 'ui-overlays';
-            }
-            if (id.includes('navigation') || id.includes('tabs') || id.includes('menubar')) {
-              return 'ui-navigation';
-            }
-            if (id.includes('form') || id.includes('checkbox') || id.includes('radio') || id.includes('select')) {
-              return 'ui-forms';
-            }
-            return 'ui-base';
-          }
-          
-          // Other major dependencies
-          if (id.includes('node_modules/recharts/')) {
-            return 'recharts-vendor';
-          }
-          if (id.includes('node_modules/framer-motion/')) {
-            return 'animations';
-          }
-          
-          if (id.includes('node_modules/')) {
+          if (id.includes('node_modules')) {
             return 'vendor';
           }
         },
