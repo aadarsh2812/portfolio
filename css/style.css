@@ -1,37 +1,37 @@
 /*!
  * Aadarsh K A S – Portfolio CSS
- * "Silicon Teal" — Apple-inspired redesign
- * Deep Teal · Midnight Navy · Clean Slate
+ * "Royal Indigo" — Google/Apple-inspired redesign
+ * Electric Indigo · Deep Indigo-Black · DM Sans
  */
 
 /* ============================================================
    CSS Variables & Design Tokens
    ============================================================ */
 :root {
-  /* === Silicon Teal Palette === */
-  --primary: #0891B2;                        /* Deep Teal          */
-  --primary-dark: #0E7490;
-  --primary-light: #22D3EE;
-  --primary-glow: rgba(8, 145, 178, 0.12);
-  --link-color: #0284C7;                     /* Teal-blue (links)  */
-  --link-hover: #0369A1;
-  --sidebar-bg: #0B1120;                     /* Midnight Navy      */
+  /* === Royal Indigo Palette === */
+  --primary: #6366F1;                        /* Electric Indigo    */
+  --primary-dark: #4F46E5;
+  --primary-light: #818CF8;
+  --primary-glow: rgba(99, 102, 241, 0.12);
+  --link-color: #4F46E5;                     /* Indigo links       */
+  --link-hover: #4338CA;
+  --sidebar-bg: #0D0B1E;                     /* Deep indigo-black  */
   --sidebar-link: rgba(255,255,255,0.72);
   --sidebar-link-hover: #ffffff;
   --text-dark: #0F172A;                      /* Cool slate-black   */
   --text-muted: #64748B;
   --text-body: #374151;                      /* Readable slate     */
   --bg-section: #ffffff;
-  --bg-alt: #F0F9FF;                         /* Cool teal-tinted   */
-  --border: rgba(8, 145, 178, 0.12);
+  --bg-alt: #F5F3FF;                         /* Subtle lavender    */
+  --border: rgba(99, 102, 241, 0.12);
   --border-subtle: rgba(0, 0, 0, 0.06);
   --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
-  --card-shadow-hover: 0 8px 32px rgba(8, 145, 178, 0.18), 0 2px 8px rgba(0,0,0,0.08);
+  --card-shadow-hover: 0 8px 32px rgba(99, 102, 241, 0.18), 0 2px 8px rgba(0,0,0,0.08);
   --radius: 12px;
   --radius-sm: 8px;
   --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
-  --font-heading: 'Plus Jakarta Sans', 'DM Sans', 'Inter', sans-serif;
-  --font-body: 'Inter', 'Open Sans', sans-serif;
+  --font-heading: 'DM Sans', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 /* ============================================================
@@ -77,11 +77,11 @@ a:hover, a:focus { color: var(--link-hover); text-decoration: none; }
    ============================================================ */
 #sideNav {
   background: var(--sidebar-bg) !important;
-  border-right: 1px solid rgba(8, 145, 178, 0.15);
+  border-right: 1px solid rgba(99, 102, 241, 0.15);
   position: relative;
 }
 
-/* Subtle teal gradient accent at the very top of sidebar */
+/* Subtle indigo gradient accent at the very top of sidebar */
 #sideNav::before {
   content: '';
   position: absolute;
@@ -139,13 +139,13 @@ a:hover, a:focus { color: var(--link-hover); text-decoration: none; }
 #sideNav .navbar-nav .nav-item .nav-link:hover {
   color: var(--sidebar-link-hover);
   border-left-color: var(--primary);
-  background: rgba(8, 145, 178, 0.10);
+  background: rgba(99, 102, 241, 0.10);
   padding-left: 1.85rem;
 }
 #sideNav .navbar-nav .nav-item.active .nav-link {
   color: #fff;
   border-left-color: var(--primary);
-  background: rgba(8, 145, 178, 0.18);
+  background: rgba(99, 102, 241, 0.18);
 }
 
 .navbar-brand span.d-block {
@@ -234,7 +234,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  border: 1px solid rgba(8, 145, 178, 0.25);
+  border: 1px solid rgba(99, 102, 241, 0.25);
   z-index: 0;
 }
 .about-profile-img {
@@ -242,14 +242,14 @@ section.resume-section .resume-item .resume-date { min-width: none; }
   object-fit: cover; object-position: center top;
   position: relative; z-index: 1;
   border: 4px solid #fff;
-  box-shadow: 0 4px 24px rgba(8, 145, 178, 0.20), 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 24px rgba(99, 102, 241, 0.20), 0 2px 8px rgba(0,0,0,0.10);
   margin: 10px;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .profile-glow-wrapper:hover::before { opacity: 0.9; }
 .profile-glow-wrapper:hover .about-profile-img {
   transform: scale(1.03);
-  box-shadow: 0 8px 40px rgba(8, 145, 178, 0.30), 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 40px rgba(99, 102, 241, 0.30), 0 4px 12px rgba(0,0,0,0.12);
 }
 
 /* Expertise tags */
@@ -257,9 +257,9 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 .etag {
   display: inline-block; padding: 5px 14px; border-radius: 20px;
   font-size: 0.78rem; font-weight: 500;
-  background: rgba(8, 145, 178, 0.07);
+  background: rgba(99, 102, 241, 0.07);
   color: var(--primary-dark);
-  border: 1px solid rgba(8, 145, 178, 0.22);
+  border: 1px solid rgba(99, 102, 241, 0.22);
   font-family: var(--font-body);
   letter-spacing: 0.01em;
   transition: all var(--transition);
@@ -269,7 +269,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
   color: #fff;
   border-color: var(--primary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(8, 145, 178, 0.3);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 /* ── Recommendation Block ── */
@@ -277,7 +277,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(8, 145, 178, 0.18);
+  border: 1px solid rgba(99, 102, 241, 0.18);
   border-top: 3px solid var(--primary);
   border-radius: var(--radius);
   padding: 1.75rem 2rem;
@@ -338,7 +338,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 }
 .exp-block:hover {
   box-shadow: var(--card-shadow-hover);
-  border-color: rgba(8, 145, 178, 0.22);
+  border-color: rgba(99, 102, 241, 0.22);
   transform: translateY(-2px);
 }
 .exp-block-inner { display: flex; gap: 1.5rem; align-items: flex-start; }
@@ -360,9 +360,9 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 .exp-placeholder-icon { text-align: center; padding: 1rem; }
 .exp-date-badge {
   display: inline-block; padding: 3px 12px; border-radius: 15px; font-size: 0.75rem; font-weight: 600;
-  background: rgba(8, 145, 178, 0.08);
+  background: rgba(99, 102, 241, 0.08);
   color: var(--primary-dark);
-  border: 1px solid rgba(8, 145, 178, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.2);
   font-family: var(--font-body); letter-spacing: 0.02em;
 }
 .exp-meta { margin-bottom: 0.25rem; }
@@ -387,7 +387,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 }
 .achievement-block:hover {
   box-shadow: var(--card-shadow-hover);
-  border-color: rgba(8, 145, 178, 0.22);
+  border-color: rgba(99, 102, 241, 0.22);
   transform: translateY(-2px);
 }
 .achievement-block-inner { display: flex; gap: 1.25rem; align-items: flex-start; }
@@ -429,9 +429,9 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 .edu-courses { display: flex; flex-wrap: wrap; gap: 6px; }
 .course-tag {
   display: inline-block; padding: 3px 12px; border-radius: 15px; font-size: 0.78rem;
-  background: rgba(8, 145, 178, 0.06);
+  background: rgba(99, 102, 241, 0.06);
   color: var(--primary-dark);
-  border: 1px solid rgba(8, 145, 178, 0.18);
+  border: 1px solid rgba(99, 102, 241, 0.18);
   font-family: var(--font-body);
 }
 
@@ -473,9 +473,9 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 .skill-chip:hover {
   border-color: var(--primary);
   color: var(--primary);
-  background: rgba(8, 145, 178, 0.07);
+  background: rgba(99, 102, 241, 0.07);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(8, 145, 178, 0.18);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.18);
 }
 .skill-chip i { font-size: 1.1rem; }
 
@@ -502,7 +502,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 }
 .project-card:hover {
   box-shadow: var(--card-shadow-hover);
-  border-color: rgba(8, 145, 178, 0.28);
+  border-color: rgba(99, 102, 241, 0.28);
   transform: translateY(-3px);
 }
 .project-card-inner { display: flex; gap: 1.25rem; align-items: flex-start; }
@@ -511,7 +511,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
   width: 150px; height: 105px; object-fit: cover; border-radius: var(--radius-sm);
   box-shadow: var(--card-shadow); border: 1px solid var(--border-subtle); transition: transform var(--transition);
 }
-.project-card:hover .project-thumbnail { transform: scale(1.04); border-color: rgba(8, 145, 178, 0.3); }
+.project-card:hover .project-thumbnail { transform: scale(1.04); border-color: rgba(99, 102, 241, 0.3); }
 .project-details { flex: 1; min-width: 0; }
 .project-details h3 { font-size: 1.5rem; margin-bottom: 0.1rem; }
 .project-details p { font-size: 0.9rem; line-height: 1.55; margin-bottom: 0.5rem; }
@@ -532,9 +532,9 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tech-tag {
   display: inline-block; padding: 3px 11px; border-radius: 15px; font-size: 0.76rem; font-weight: 500;
-  background: rgba(8, 145, 178, 0.07);
+  background: rgba(99, 102, 241, 0.07);
   color: var(--primary-dark);
-  border: 1px solid rgba(8, 145, 178, 0.18);
+  border: 1px solid rgba(99, 102, 241, 0.18);
   font-family: var(--font-body); transition: all var(--transition);
 }
 .tech-tag:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
@@ -563,7 +563,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 .achievement-list {
   display: flex;
   flex-direction: column;
-  border-left: 2px solid rgba(8, 145, 178, 0.25);
+  border-left: 2px solid rgba(99, 102, 241, 0.25);
   padding-left: 1.5rem;
   margin-left: 0.25rem;
 }
@@ -575,7 +575,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
   transition: background var(--transition);
 }
 .ach-entry:last-child { border-bottom: none; }
-.ach-entry:hover { background: rgba(8, 145, 178, 0.03); }
+.ach-entry:hover { background: rgba(99, 102, 241, 0.03); }
 .ach-entry-left {
   flex-shrink: 0;
   width: 70px;
@@ -643,7 +643,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 .cert-img-card:hover {
   box-shadow: var(--card-shadow-hover);
   transform: translateY(-3px);
-  border-color: rgba(8, 145, 178, 0.28);
+  border-color: rgba(99, 102, 241, 0.28);
 }
 .cert-img-card img {
   width: 100%; height: 100%;
@@ -732,11 +732,11 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 }
 .nav-left { left: 0; }
 .nav-right { right: 0; }
-.cert-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-4px); border-color: rgba(8, 145, 178, 0.25); }
+.cert-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-4px); border-color: rgba(99, 102, 241, 0.25); }
 .cert-img-wrap { width: 100%; height: 150px; overflow: hidden; background: var(--bg-alt); }
 .cert-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
 .cert-card:hover .cert-img-wrap img { transform: scale(1.05); }
-.cert-img-placeholder { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--bg-alt), #e0f2fe); }
+.cert-img-placeholder { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--bg-alt), #EDE9FE); }
 .cert-info { padding: 0.85rem 1rem; flex: 1; }
 .cert-info h4 { font-size: 0.92rem; margin-bottom: 3px; color: var(--text-dark); line-height: 1.3; font-weight: 600; }
 .cert-issuer { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 600; letter-spacing: 0.03em; }
@@ -763,18 +763,18 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 
 .resume-download-btn {
   border-radius: 30px; padding: 12px 28px; font-weight: 700; font-size: 0.95rem;
-  letter-spacing: 0.02em; box-shadow: 0 4px 20px rgba(8, 145, 178, 0.3); transition: all var(--transition);
+  letter-spacing: 0.02em; box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3); transition: all var(--transition);
 }
-.resume-download-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(8, 145, 178, 0.45); }
+.resume-download-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(99, 102, 241, 0.45); }
 
 .contact-form .form-control {
   border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); padding: 12px 16px;
   font-size: 0.95rem; color: var(--text-dark); transition: all var(--transition); background: var(--bg-section);
 }
-.contact-form .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.12); outline: none; }
+.contact-form .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12); outline: none; }
 .contact-form label { font-weight: 600; font-size: 0.85rem; letter-spacing: 0.02em; color: var(--text-muted); margin-bottom: 6px; }
 .contact-form .btn { padding: 14px; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.02em; border-radius: var(--radius-sm); transition: all var(--transition); }
-.contact-form .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(8, 145, 178, 0.35); }
+.contact-form .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35); }
 
 /* ============================================================
    Footer
@@ -782,7 +782,7 @@ section.resume-section .resume-item .resume-date { min-width: none; }
 .portfolio-footer {
   background: var(--sidebar-bg);
   color: rgba(255,255,255,0.6); text-align: center;
-  padding: 2rem 1rem; border-top: 1px solid rgba(8, 145, 178, 0.15);
+  padding: 2rem 1rem; border-top: 1px solid rgba(99, 102, 241, 0.15);
 }
 .portfolio-footer strong { color: var(--primary); }
 .portfolio-footer a { color: var(--link-color); }
