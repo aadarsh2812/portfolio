@@ -8,7 +8,7 @@
   <meta name="author" content="Aadarsh K A S">
   <title>Aadarsh Portfolio</title>
   <!-- Favicon -->
-  <link rel="icon" type="image/webp" href="assets/web_img/icon.webp">
+  <link rel="icon" type="image/png" href="assets/web_img/favicon_ak.png">
   <!-- Bootstrap -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
@@ -40,9 +40,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Internships</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#highlights">Highlights</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
@@ -87,7 +87,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="assets/docs/Resume.pdf" target="_blank" title="Download Resume">
+                <a href="assets/docs/resume.pdf" download="Aadarsh_KAS_Resume.pdf" title="Download Resume">
                   <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-download fa-stack-1x fa-inverse"></i></span>
                 </a>
               </li>
@@ -174,6 +174,168 @@
               </div>
             </div>
           </div>
+        </div>
+
+      </div>
+    </section>
+    <hr class="m-0">
+
+    <!-- ======================== PROJECTS ======================== -->
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+      <div class="my-auto">
+        <h2 class="mb-5">Projects</h2>
+
+        <h4 class="projects-subheading mb-4"><i class="fas fa-microchip text-primary mr-2"></i>VLSI &middot; RTL &middot; FPGA</h4>
+
+        <!-- Configurable Cache Memory Subsystem -->
+        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <div class="project-card-inner">
+              <div class="project-img-wrap">
+                <img src="assets/projects/Cache_memory/cache_icon.png" alt="Configurable Cache Memory Design in Verilog" class="project-thumbnail">
+              </div>
+              <div class="project-details">
+                <h3 class="mb-0">Parameterized Cache Memory Subsystem</h3>
+                <div class="subheading mb-2">Configurable Cache Memory Design in Verilog</div>
+                <p>A synthesizable, parameterized cache memory subsystem designed for scalable hardware integration. The project features configurable cache architecture, controller logic, and memory array organization, making it adaptable for different performance and capacity requirements.</p>
+                <div class="tech-tags mt-2 mb-2">
+                  <span class="tech-tag">Verilog</span><span class="tech-tag">RTL Design</span><span class="tech-tag">Cache Controller</span><span class="tech-tag">Memory Subsystem</span><span class="tech-tag">VLSI</span><span class="tech-tag">Hardware Architecture</span>
+                </div>
+                <a href="https://github.com/aadarsh2812/Parameterized-Cache-Memory-Subsystem" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="resume-date text-md-right"><span class="text-primary">2026</span></div>
+        </div>
+
+        <!-- Custom NOT Gate Macro -->
+        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <div class="project-card-inner">
+              <div class="project-img-wrap">
+                <img src="assets/projects/not_gate.jpeg" alt="Custom NOT Gate Macro" class="project-thumbnail">
+              </div>
+              <div class="project-details">
+                <h3 class="mb-0">Custom NOT Gate Macro</h3>
+                <div class="subheading mb-2">SkyWater 130nm CMOS Process</div>
+                <p>Implemented a custom NOT gate macro using the SkyWater 130nm CMOS process. The design was constrained to an absolute die area of 30x30 microns with a deterministic pin-ordering (West-In, East-Out) to facilitate future hierarchical integration. The flow was executed via OpenLane 2, utilizing Yosys for logic mapping and OpenROAD for detailed routing, resulting in a DRC-clean GDSII layout.</p>
+                <div class="tech-tags mt-2 mb-2">
+                  <span class="tech-tag">SkyWater 130nm</span><span class="tech-tag">OpenLane 2</span><span class="tech-tag">Yosys</span><span class="tech-tag">OpenROAD</span><span class="tech-tag">GDSII</span><span class="tech-tag">VLSI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="resume-date text-md-right"><span class="text-primary">2026</span></div>
+        </div>
+
+        <!-- VGA Pong on FPGA -->
+        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <div class="project-card-inner">
+              <div class="project-img-wrap">
+                <img src="assets/projects/space/thumb.png" alt="VGA Pong on FPGA on Silicon" class="project-thumbnail">
+              </div>
+              <div class="project-details">
+                <h3 class="mb-0">VGA Pong on FPGA on Silicon</h3>
+                <div class="subheading mb-2">Classic Pong Game on FPGA</div>
+                <p>Designed and implemented the classic Pong game using hardware description language. Generated VGA timing signals and rendered game graphics directly on a monitor. Handled real-time paddle movement logic, collision detection, and score tracking entirely in RTL.</p>
+                <div class="tech-tags mt-2 mb-2">
+                  <span class="tech-tag">Verilog</span><span class="tech-tag">FPGA</span><span class="tech-tag">VGA Controller</span><span class="tech-tag">Digital Design</span><span class="tech-tag">Game Logic RTL</span>
+                </div>
+                <a href="https://github.com/aadarsh2812/Vga_Pong_Game" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-github"></i> View on GitHub</a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7461282677908746240/" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-linkedin-in"></i> View on LinkedIn</a>
+              </div>
+            </div>
+          </div>
+          <div class="resume-date text-md-right"><span class="text-primary">2026</span></div>
+        </div>
+
+        <h4 class="projects-subheading mb-4 mt-3"><i class="fas fa-layer-group text-primary mr-2"></i>Hardware &amp; PCB Design</h4>
+
+        <!-- LED Sequence PCB Design -->
+        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <div class="project-card-inner">
+              <div class="project-img-wrap">
+                <img src="assets/projects/pcb/1726451922873.jpg" alt="LED Sequence PCB Design" class="project-thumbnail">
+              </div>
+              <div class="project-details">
+                <h3 class="mb-0">LED Sequence PCB Design</h3>
+                <div class="subheading mb-2">Compact Indicator Module</div>
+                <p>Designed a compact PCB for an LED indicator using Altium, optimized for systems. Applicable for various status displays and low-footprint integrations.</p>
+                <div class="tech-tags mt-2 mb-2">
+                  <span class="tech-tag">Altium Designer</span><span class="tech-tag">PCB Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="resume-date text-md-right"><span class="text-primary">2024</span></div>
+        </div>
+
+        <h4 class="projects-subheading mb-4 mt-3"><i class="fas fa-wifi text-primary mr-2"></i>Embedded Systems &amp; IoT</h4>
+
+        <!-- Mento Band -->
+        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <div class="project-card-inner">
+              <div class="project-img-wrap">
+                <img src="assets/projects/mento/thumb.png" alt="Mento Band SIH 2025" class="project-thumbnail">
+              </div>
+              <div class="project-details">
+                <h3 class="mb-0">Mento Band</h3>
+                <div class="subheading mb-2">AI-Powered Wearable for Athletic Injury Prevention &middot; SIH 2025 Grand Finale</div>
+                <p>Built a dual <strong>ESP32-based wearable athlete monitoring platform</strong> tracking heart rate, blood pressure, EMG, and biomechanics in real-time. Predictive AI delivers real-time injury risk assessment and performance optimization insights. Selected for the <strong>SIH 2025 Senior Hardware Grand Finale</strong> (8&ndash;12 Dec 2025, LPU).</p>
+                <div class="tech-tags mt-2 mb-2">
+                  <span class="tech-tag">ESP32</span><span class="tech-tag">AI / ML</span><span class="tech-tag">EMG</span><span class="tech-tag">Wearable Tech</span><span class="tech-tag">Firebase</span><span class="tech-tag">Flutter</span><span class="tech-tag">SIH 2025</span>
+                </div>
+                <a href="https://github.com/aadarsh2812/Mento-Band.git" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="resume-date text-md-right"><span class="text-primary">2025</span></div>
+        </div>
+
+
+        <!-- Muscle-Sync -->
+        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <div class="project-card-inner">
+              <div class="project-img-wrap">
+                <img src="assets/projects/musclesync/thumb.jpg" alt="Muscle-Sync EMG" class="project-thumbnail">
+              </div>
+              <div class="project-details">
+                <h3 class="mb-0">Muscle-Sync</h3>
+                <div class="subheading mb-2">Real-Time EMG-Based Control System</div>
+                <p>Built an <strong>Electromyography (EMG) sensor-based control system</strong> with real-time signal processing. Translates muscle contractions into precise game inputs for immersive hands-free interaction. Signal filtering and classification done on ESP32 with sub-10ms latency.</p>
+                <div class="tech-tags mt-2 mb-2">
+                  <span class="tech-tag">EMG Sensor</span><span class="tech-tag">ESP32</span><span class="tech-tag">Signal Processing</span><span class="tech-tag">C++</span><span class="tech-tag">Real-time</span>
+                </div>
+                <a href="https://github.com/aadarsh2812/Muscle-sync" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="resume-date text-md-right"><span class="text-primary">2024</span></div>
+        </div>
+
+        <!-- PiStream -->
+        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <div class="project-card-inner">
+              <div class="project-img-wrap">
+                <img src="assets/projects/pistream/thumb.jpeg" alt="PiStream" class="project-thumbnail">
+              </div>
+              <div class="project-details">
+                <h3 class="mb-0">PiStream</h3>
+                <div class="subheading mb-2">App-Controlled Live Streaming &amp; Audio Analysis System</div>
+                <p>Designed a <strong>Raspberry Pi-based smart surveillance platform</strong> combining real-time HD video streaming, audio spectrum analysis, and Firebase cloud backend. Fully controlled via a Flutter mobile app with push notifications and motion detection alerts.</p>
+                <div class="tech-tags mt-2 mb-2">
+                  <span class="tech-tag">Raspberry Pi</span><span class="tech-tag">Flutter</span><span class="tech-tag">Firebase</span><span class="tech-tag">PCB Design</span><span class="tech-tag">RTSP</span><span class="tech-tag">Python</span>
+                </div>
+                <a href="https://www.linkedin.com/posts/aadarsh2812_iot-embeddedsystems-raspberrypi-ugcPost-7346168604100304914-Ta8Y/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcYO0UBGrZtBmGb-tykBVK-YCJLD6FtusU" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-linkedin-in"></i> View on LinkedIn</a>
+              </div>
+            </div>
+          </div>
+          <div class="resume-date text-md-right"><span class="text-primary">2024</span></div>
         </div>
 
       </div>
@@ -354,6 +516,9 @@
                   <span class="course-tag">Signal Processing</span>
                   <span class="course-tag">IoT Systems</span>
                 </div>
+                <p class="mt-3 mb-0 text-muted small">
+                  <i class="fas fa-id-badge text-primary mr-1"></i><strong>Professional Affiliation:</strong> Student Member &middot; IETE Students Forum (ISF &middot; RIT Chapter)
+                </p>
               </div>
             </div>
           </div>
@@ -408,169 +573,6 @@
       </div>
     </section>
     <hr class="m-0">
-
-    <!-- ======================== PROJECTS ======================== -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-      <div class="my-auto">
-        <h2 class="mb-5">Projects</h2>
-
-        <h4 class="projects-subheading mb-4"><i class="fas fa-microchip text-primary mr-2"></i>VLSI &middot; RTL &middot; FPGA</h4>
-
-        <!-- Configurable Cache Memory Subsystem -->
-        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <div class="project-card-inner">
-              <div class="project-img-wrap">
-                <img src="assets/projects/Cache_memory/cache_icon.png" alt="Configurable Cache Memory Design in Verilog" class="project-thumbnail">
-              </div>
-              <div class="project-details">
-                <h3 class="mb-0">Parameterized Cache Memory Subsystem</h3>
-                <div class="subheading mb-2">Configurable Cache Memory Design in Verilog</div>
-                <p>A synthesizable, parameterized cache memory subsystem designed for scalable hardware integration. The project features configurable cache architecture, controller logic, and memory array organization, making it adaptable for different performance and capacity requirements.</p>
-                <div class="tech-tags mt-2 mb-2">
-                  <span class="tech-tag">Verilog</span><span class="tech-tag">RTL Design</span><span class="tech-tag">Cache Controller</span><span class="tech-tag">Memory Subsystem</span><span class="tech-tag">VLSI</span><span class="tech-tag">Hardware Architecture</span>
-                </div>
-                <a href="https://github.com/aadarsh2812/Parameterized-Cache-Memory-Subsystem" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-github"></i> View on GitHub</a>
-              </div>
-            </div>
-          </div>
-          <div class="resume-date text-md-right"><span class="text-primary">2026</span></div>
-        </div>
-
-        <!-- Custom NOT Gate Macro -->
-        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <div class="project-card-inner">
-              <div class="project-img-wrap">
-                <img src="assets/projects/not_gate.jpeg" alt="Custom NOT Gate Macro" class="project-thumbnail">
-              </div>
-              <div class="project-details">
-                <h3 class="mb-0">Custom NOT Gate Macro</h3>
-                <div class="subheading mb-2">SkyWater 130nm CMOS Process</div>
-                <p>Implemented a custom NOT gate macro using the SkyWater 130nm CMOS process. The design was constrained to an absolute die area of 30x30 microns with a deterministic pin-ordering (West-In, East-Out) to facilitate future hierarchical integration. The flow was executed via OpenLane 2, utilizing Yosys for logic mapping and OpenROAD for detailed routing, resulting in a DRC-clean GDSII layout.</p>
-                <div class="tech-tags mt-2 mb-2">
-                  <span class="tech-tag">SkyWater 130nm</span><span class="tech-tag">OpenLane 2</span><span class="tech-tag">Yosys</span><span class="tech-tag">OpenROAD</span><span class="tech-tag">GDSII</span><span class="tech-tag">VLSI</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="resume-date text-md-right"><span class="text-primary">2026</span></div>
-        </div>
-
-        <!-- VGA Pong on FPGA -->
-        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <div class="project-card-inner">
-              <div class="project-img-wrap">
-                <img src="assets/projects/space/thumb.png" alt="VGA Pong on FPGA on Silicon" class="project-thumbnail">
-              </div>
-              <div class="project-details">
-                <h3 class="mb-0">VGA Pong on FPGA on Silicon</h3>
-                <div class="subheading mb-2">Classic Pong Game on FPGA</div>
-                <p>Designed and implemented the classic Pong game using hardware description language. Generated VGA timing signals and rendered game graphics directly on a monitor. Handled real-time paddle movement logic, collision detection, and score tracking entirely in RTL.</p>
-                <div class="tech-tags mt-2 mb-2">
-                  <span class="tech-tag">Verilog</span><span class="tech-tag">FPGA</span><span class="tech-tag">VGA Controller</span><span class="tech-tag">Digital Design</span><span class="tech-tag">Game Logic RTL</span>
-                </div>
-                <a href="https://github.com/aadarsh2812/Vga_Pong_Game" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-github"></i> View on GitHub</a>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7461282677908746240/" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-linkedin-in"></i> View on LinkedIn</a>
-              </div>
-            </div>
-          </div>
-          <div class="resume-date text-md-right"><span class="text-primary">2026</span></div>
-        </div>
-
-        <h4 class="projects-subheading mb-4 mt-3"><i class="fas fa-layer-group text-primary mr-2"></i>Hardware &amp; PCB Design</h4>
-
-        <!-- LED Sequence PCB Design -->
-        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <div class="project-card-inner">
-              <div class="project-img-wrap">
-                <img src="assets/projects/pcb/1726451922873.jpg" alt="LED Sequence PCB Design" class="project-thumbnail">
-              </div>
-              <div class="project-details">
-                <h3 class="mb-0">LED Sequence PCB Design</h3>
-                <div class="subheading mb-2">Compact Indicator Module</div>
-                <p>Designed a compact PCB for an LED indicator using Altium, optimized for systems. Applicable for various status displays and low-footprint integrations.</p>
-                <div class="tech-tags mt-2 mb-2">
-                  <span class="tech-tag">Altium Designer</span><span class="tech-tag">PCB Design</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="resume-date text-md-right"><span class="text-primary">2024</span></div>
-        </div>
-
-        <h4 class="projects-subheading mb-4 mt-3"><i class="fas fa-wifi text-primary mr-2"></i>Embedded Systems &amp; IoT</h4>
-
-        <!-- Mento Band -->
-        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <div class="project-card-inner">
-              <div class="project-img-wrap">
-                <img src="assets/projects/mento/thumb.png" alt="Mento Band SIH 2025" class="project-thumbnail">
-              </div>
-              <div class="project-details">
-                <h3 class="mb-0">Mento Band</h3>
-                <div class="subheading mb-2">AI-Powered Wearable for Athletic Injury Prevention &middot; SIH 2025 Grand Finale</div>
-                <p>Built a dual <strong>ESP32-based wearable athlete monitoring platform</strong> tracking heart rate, blood pressure, EMG, and biomechanics in real-time. Predictive AI delivers real-time injury risk assessment and performance optimization insights. Selected for the <strong>SIH 2025 Senior Hardware Grand Finale</strong> (8&ndash;12 Dec 2025, LPU).</p>
-                <div class="tech-tags mt-2 mb-2">
-                  <span class="tech-tag">ESP32</span><span class="tech-tag">AI / ML</span><span class="tech-tag">EMG</span><span class="tech-tag">Wearable Tech</span><span class="tech-tag">Firebase</span><span class="tech-tag">Flutter</span><span class="tech-tag">SIH 2025</span>
-                </div>
-                <a href="https://github.com/aadarsh2812/Mento-Band.git" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-github"></i> GitHub</a>
-              </div>
-            </div>
-          </div>
-          <div class="resume-date text-md-right"><span class="text-primary">2025</span></div>
-        </div>
-
-
-        <!-- Muscle-Sync -->
-        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <div class="project-card-inner">
-              <div class="project-img-wrap">
-                <img src="assets/projects/musclesync/thumb.jpg" alt="Muscle-Sync EMG" class="project-thumbnail">
-              </div>
-              <div class="project-details">
-                <h3 class="mb-0">Muscle-Sync</h3>
-                <div class="subheading mb-2">Real-Time EMG-Based Control System</div>
-                <p>Built an <strong>Electromyography (EMG) sensor-based control system</strong> with real-time signal processing. Translates muscle contractions into precise game inputs for immersive hands-free interaction. Signal filtering and classification done on ESP32 with sub-10ms latency.</p>
-                <div class="tech-tags mt-2 mb-2">
-                  <span class="tech-tag">EMG Sensor</span><span class="tech-tag">ESP32</span><span class="tech-tag">Signal Processing</span><span class="tech-tag">C++</span><span class="tech-tag">Real-time</span>
-                </div>
-                <a href="https://github.com/aadarsh2812/Muscle-sync" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-github"></i> View on GitHub</a>
-              </div>
-            </div>
-          </div>
-          <div class="resume-date text-md-right"><span class="text-primary">2024</span></div>
-        </div>
-
-        <!-- PiStream -->
-        <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <div class="project-card-inner">
-              <div class="project-img-wrap">
-                <img src="assets/projects/pistream/thumb.jpeg" alt="PiStream" class="project-thumbnail">
-              </div>
-              <div class="project-details">
-                <h3 class="mb-0">PiStream</h3>
-                <div class="subheading mb-2">App-Controlled Live Streaming &amp; Audio Analysis System</div>
-                <p>Designed a <strong>Raspberry Pi-based smart surveillance platform</strong> combining real-time HD video streaming, audio spectrum analysis, and Firebase cloud backend. Fully controlled via a Flutter mobile app with push notifications and motion detection alerts.</p>
-                <div class="tech-tags mt-2 mb-2">
-                  <span class="tech-tag">Raspberry Pi</span><span class="tech-tag">Flutter</span><span class="tech-tag">Firebase</span><span class="tech-tag">PCB Design</span><span class="tech-tag">RTSP</span><span class="tech-tag">Python</span>
-                </div>
-                <a href="https://www.linkedin.com/posts/aadarsh2812_pcbdesign-flutterdevelopment-firebase-activity-7346164719088541696-X20T" target="_blank" class="btn btn-primary btn-sm project-btn"><i class="fab fa-linkedin-in"></i> View on LinkedIn</a>
-              </div>
-            </div>
-          </div>
-          <div class="resume-date text-md-right"><span class="text-primary">2024</span></div>
-        </div>
-
-      </div>
-    </section>
-    <hr class="m-0">
-
     <!-- ======================== SKILLS ======================== -->
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
       <div class="my-auto">
@@ -739,23 +741,12 @@
 
           <div class="ach-entry">
             <div class="ach-entry-left">
-              <span class="ach-year">2026&ndash;28</span>
+              <span class="ach-year">2025</span>
             </div>
             <div class="ach-entry-body">
-              <strong class="ach-title">IETE Students Forum &ndash; Membership</strong>
-              <span class="ach-org">Institution of Electronics and Telecommunication Engineers</span>
-              <p class="ach-desc">Active member of the IETE Students Forum, RIT chapter, engaging in technical talks, workshops, and inter-college competitions.</p>
-            </div>
-          </div>
-
-          <div class="ach-entry">
-            <div class="ach-entry-left">
-              <span class="ach-year">2024</span>
-            </div>
-            <div class="ach-entry-body">
-              <strong class="ach-title">Certificate of Excellence &mdash; Spinacle AIoT Internship</strong>
-              <span class="ach-org">Spinacle Technologies</span>
-              <p class="ach-desc">Awarded a Certificate of Excellence for outstanding performance during the AIoT internship, contributing to R&amp;D in embedded and sensor-based systems.</p>
+              <strong class="ach-title">Award for Outstanding Contribution &ndash; Centre of Excellence for IoT</strong>
+              <span class="ach-org">Rajalakshmi Institute of Technology (RIT) &middot; National Science Day</span>
+              <p class="ach-desc">Awarded Certificate of Appreciation on National Science Day (28-02-2025) for outstanding participation, dedication, and valuable contributions in the Centre of Excellence for Internet of Things (IoT) toward innovative project development.</p>
             </div>
           </div>
 
@@ -770,8 +761,7 @@
             <div class="cert-img-card"><img src="assets/achievements/Pals-pic (1).png" alt="PALS Pitch Fest 2026"></div>
             <div class="cert-img-card"><img src="assets/certificates/AIC&Pals.jpeg" alt="AIC & PALS Certificate"></div>
             <div class="cert-img-card"><img src="assets/certificates/Pals_cluster.jpeg" alt="PALS Cluster Finals"></div>
-            <div class="cert-img-card"><img src="assets/certificates/IETE&mem.jpeg" alt="IETE Membership"></div>
-            <div class="cert-img-card"><img src="assets/certificates/spinacle.jpg" alt="Spinacle Certificate"></div>
+            <div class="cert-img-card"><img src="assets/achievements/science.jpeg" alt="Award for Outstanding Contribution - Centre of Excellence for IoT, National Science Day RIT"></div>
           </div>
           <button class="carousel-nav nav-right"><i class="fas fa-chevron-right"></i></button>
         </div>
@@ -948,6 +938,30 @@
             <div class="cert-img-card"><img src="assets/certificates/digital_electronics.png" alt="Digital Circuits"></div>
           </div>
           <button class="carousel-nav nav-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- &middot; Professional Memberships & Affiliations &middot; -->
+        <h3 class="highlights-subheading mb-4 mt-5"><i class="fas fa-id-badge text-primary mr-2"></i>Professional Memberships &amp; Affiliations</h3>
+
+        <div class="achievement-list mb-4">
+          <div class="ach-entry">
+            <div class="ach-entry-left">
+              <span class="ach-year">2026&ndash;28</span>
+            </div>
+            <div class="ach-entry-body">
+              <strong class="ach-title">IETE Students Forum (ISF) &ndash; Student Member</strong>
+              <span class="ach-org">Institution of Electronics and Telecommunication Engineers &middot; RIT Chapter</span>
+              <p class="ach-desc">Active student member of the IETE Students Forum (Membership No: 346148) at Rajalakshmi Institute of Technology. Participating in technical workshops, guest lectures, symposiums, and professional networking in electronics and telecommunications engineering.</p>
+              <div class="mt-3 mb-3">
+                <div class="cert-img-card" style="max-width: 280px; height: 195px;">
+                  <img src="assets/certificates/IETE&mem.jpeg" alt="IETE Students Forum Membership Certificate">
+                </div>
+              </div>
+              <a href="assets/certificates/IETE&mem.jpeg" target="_blank" class="cert-link d-inline-block">
+                <i class="fas fa-certificate"></i> View Membership Certificate
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>
