@@ -14,7 +14,7 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -118,43 +118,83 @@
           </div>
         </div>
 
-        <!-- &middot; Mentor Recommendations &middot; -->
         <style>
-          .testimonials-row {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 2.5rem;
-            align-items: stretch;
+          /* Auto-cycling single testimonial */
+          .rec-cycler-wrapper {
+            margin-top: 2rem;
           }
 
-          .testimonials-row .recommendation-block {
-            flex: 1;
-            min-width: 0;
+          .rec-cycler-header {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+          }
+
+          .rec-cycler-header h3 {
             margin: 0;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: var(--font-body);
           }
 
-          .testimonials-row .recommendation-inner {
-            flex: 1;
+          /* The cycling container — grid stacking keeps height stable */
+          .rec-cycler {
+            display: grid;
+          }
+
+          .rec-slide {
+            grid-area: 1 / 1;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+          }
+
+          .rec-slide.rec-active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+          }
+
+          /* Dot indicators */
+          .rec-dots {
             display: flex;
-            flex-direction: column;
+            gap: 6px;
+            margin-top: 1.25rem;
+            align-items: center;
           }
 
-          .testimonials-row .rec-text {
-            flex: 1;
+          .rec-dot {
+            width: 18px;
+            height: 2px;
+            background: rgba(26, 24, 20, 0.18);
+            border-radius: 1px;
+            cursor: pointer;
+            transition: background 0.25s, width 0.25s;
+            border: none;
+            padding: 0;
           }
 
-          @media (max-width: 900px) {
-            .testimonials-row {
-              flex-direction: column;
-            }
+          .rec-dot.active {
+            width: 32px;
+            background: var(--primary);
           }
         </style>
-        <div class="testimonials-row">
-          <!-- Card 1: Dr. Senthilkumar V M -->
-          <div class="recommendation-block">
-            <div class="recommendation-inner">
+
+        <div class="rec-cycler-wrapper">
+          <div class="rec-cycler-header">
+            <i class="fas fa-quote-left" style="color: var(--text-muted); font-size: 0.85rem; opacity:0.5;"></i>
+            <h3>Mentor Recommendations</h3>
+          </div>
+
+          <div class="rec-cycler" id="recCycler">
+
+            <!-- Slide 1: Dr. Senthilkumar V M -->
+            <div class="rec-slide rec-active">
               <div class="rec-quote-icon"><i class="fas fa-quote-left"></i></div>
               <blockquote class="rec-text">
                 I am delighted to recommend Aadarsh K.A.S, a highly talented and promising Final-year student of
@@ -176,15 +216,14 @@
                 collaborative spirit. I am confident that Aadarsh has the potential to grow into a strong VLSI/ASIC
                 design engineer, semiconductor professional or technology product developer.<br><br>
                 I strongly recommend Aadarsh K.A.S for industry internships, semiconductor projects, research
-                opportunities and technology-driven roles. I am confident that he will be an asset to any organization
-                that provides him with an opportunity to learn, innovate and contribute. Wishing Aadarsh continued
-                success in his journey towards building the next generation of semiconductor and technology solutions.
+                opportunities and technology-driven roles. Wishing Aadarsh continued success in his journey towards
+                building the next generation of semiconductor and technology solutions.
               </blockquote>
               <div class="rec-author">
                 <div class="rec-author-info">
                   <strong><a href="https://www.linkedin.com/in/senthilkumarvm10/" target="_blank"
-                      style="color: inherit; text-decoration: none;">Dr. Senthilkumar V M</a> <a
-                      href="https://www.linkedin.com/in/senthilkumarvm10/" target="_blank"
+                      style="color: inherit; text-decoration: none;">Dr. Senthilkumar V M</a>
+                    <a href="https://www.linkedin.com/in/senthilkumarvm10/" target="_blank"
                       style="color: var(--link-color);"><i class="fab fa-linkedin"></i></a></strong>
                   <span>Professor &amp; Centre Head &middot; Semiconductor Design, Rajalakshmi Institute of Technology,
                     Chennai</span>
@@ -192,10 +231,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Card 2: Prasanth B R -->
-          <div class="recommendation-block">
-            <div class="recommendation-inner">
+
+            <!-- Slide 2: Prasanth B R -->
+            <div class="rec-slide">
               <div class="rec-quote-icon"><i class="fas fa-quote-left"></i></div>
               <blockquote class="rec-text">
                 It has been my pleasure to mentor and train Aadarsh, during his Skill Development Training Program under
@@ -210,16 +248,90 @@
               <div class="rec-author">
                 <div class="rec-author-info">
                   <strong><a href="https://www.linkedin.com/in/prasanthbr/?skipRedirect=true" target="_blank"
-                      style="color: inherit; text-decoration: none;">Prasanth B R</a> <a
-                      href="https://www.linkedin.com/in/prasanthbr/?skipRedirect=true" target="_blank"
+                      style="color: inherit; text-decoration: none;">Prasanth B R</a>
+                    <a href="https://www.linkedin.com/in/prasanthbr/?skipRedirect=true" target="_blank"
                       style="color: var(--link-color);"><i class="fab fa-linkedin"></i></a></strong>
                   <span>Mentor &amp; Trainer &middot; MeitY-funded NIELIT EdTech Project</span>
                   <span class="rec-date">Mentor</span>
                 </div>
               </div>
             </div>
+
+            <!-- Slide 3: Dr. Maheswari Raja -->
+            <div class="rec-slide">
+              <div class="rec-quote-icon"><i class="fas fa-quote-left"></i></div>
+              <blockquote class="rec-text">
+                It is a pleasure to recommend Aadarsh, a highly capable and promising student with a strong
+                entrepreneurial mindset, curiosity and the ability to turn ideas into meaningful solutions.<br><br>
+                His performance with Team Atomic Minds at the IIT PALS &times; Anna Incubator Pitch Fest is a
+                reflection of his confidence, teamwork, problem-solving ability and willingness to learn from
+                challenges. Securing the 2nd Runner-Up position among competing teams is indeed commendable.<br><br>
+                What particularly stands out is his ability to listen, question assumptions and continuously
+                improve&mdash;qualities that will serve him well in his academic and professional journey.<br><br>
+                I am confident that Aadarsh has the potential to take up greater challenges and create a meaningful
+                impact in the future. Wishing him continued success and excellence.
+              </blockquote>
+              <div class="rec-author">
+                <div class="rec-author-info">
+                  <strong><a href="https://www.linkedin.com/in/dr-maheswariraja/" target="_blank"
+                      style="color: inherit; text-decoration: none;">Dr. Maheswari Raja</a>
+                    <a href="https://www.linkedin.com/in/dr-maheswariraja/" target="_blank"
+                      style="color: var(--link-color);"><i class="fab fa-linkedin"></i></a></strong>
+                  <span>Principal &amp; Professor, Rajalakshmi Institute of Technology &middot; Former Director &amp;
+                    Professor, Symbiosis-Pune (SSPU) &middot; Head of Department &amp; Professor, SCOPE, VIT &middot;
+                    Dean, Sri Eshwar College of Engineering</span>
+                  <span class="rec-date">Mentor</span>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /.rec-cycler -->
+
+          <!-- Dot indicators -->
+          <div class="rec-dots" id="recDots">
+            <button class="rec-dot active" onclick="recGoTo(0)" aria-label="Testimonial 1"></button>
+            <button class="rec-dot" onclick="recGoTo(1)" aria-label="Testimonial 2"></button>
+            <button class="rec-dot" onclick="recGoTo(2)" aria-label="Testimonial 3"></button>
           </div>
-        </div>
+        </div><!-- /.rec-cycler-wrapper -->
+
+        <script>
+          (function () {
+            var cycler = document.getElementById('recCycler');
+            var slides = document.querySelectorAll('#recCycler .rec-slide');
+            var dots = document.querySelectorAll('#recDots .rec-dot');
+            var current = 0;
+            var timer;
+            var paused = false;
+
+            function showSlide(idx) {
+              slides[current].classList.remove('rec-active');
+              dots[current].classList.remove('active');
+              current = (idx + slides.length) % slides.length;
+              slides[current].classList.add('rec-active');
+              dots[current].classList.add('active');
+            }
+
+            function next() { if (!paused) showSlide(current + 1); }
+
+            function startTimer() {
+              clearInterval(timer);
+              timer = setInterval(next, 5000);
+            }
+
+            // Pause on hover so readers can finish reading
+            cycler.addEventListener('mouseenter', function () { paused = true; });
+            cycler.addEventListener('mouseleave', function () { paused = false; });
+
+            // Allow manual dot navigation to restart the timer
+            window.recGoTo = function (idx) {
+              showSlide(idx);
+              startTimer();
+            };
+
+            startTimer();
+          })();
+        </script>
 
       </div>
     </section>
@@ -440,7 +552,7 @@
               <div class="exp-meta">
                 <h3 class="mb-0">RTL Design &amp; Verification Intern</h3>
                 <div class="subheading mb-1">Struent Semiconductors &middot; Chennai, India</div>
-                <span class="exp-date-badge">2026</span>
+                <span class="exp-date-badge">April 2026 &ndash; May 2026 &middot; 2 Months</span>
               </div>
               <ul class="exp-list mt-3">
                 <li>Worked on RTL design and verification of digital circuits in a semiconductor environment.</li>
@@ -601,7 +713,7 @@
             <div class="edu-item-inner">
               <div class="edu-text">
                 <h3 class="mb-0">Rajalakshmi Institute of Technology</h3>
-                <div class="subheading mb-1">Bachelor of Engineering &ndash; Electronics &amp; Communication Engineering
+                <div class="subheading mb-1">Bachelor of Engineering &ndash; Electronics &amp; Engineering
                 </div>
                 <div class="edu-spec mb-2">Specialization: VLSI Design &amp; Technology</div>
                 <p class="mb-1"><strong>CGPA: 7.83 / 10</strong></p>
@@ -1288,15 +1400,7 @@
         track.scrollBy({ left: 300, behavior: 'smooth' });
       });
     });
-    // Testimonial Carousel Init
-    if (typeof $ !== 'undefined') {
-      $(document).ready(function () {
-        $('#testimonialCarousel').carousel({
-          interval: 6000,
-          pause: "hover"
-        });
-      });
-    }
+    // Testimonial carousel uses the same certs-carousel-wrapper auto-scroll engine above — no extra init needed.
   </script>
 </body>
 
