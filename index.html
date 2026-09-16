@@ -42,6 +42,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tapeout">Tapeout</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Internships</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
@@ -330,6 +331,367 @@
             };
 
             startTimer();
+          })();
+        </script>
+
+      </div>
+    </section>
+    <hr class="m-0">
+
+    <!-- ======================== TAPEOUT (LIVE PROJECT) ======================== -->
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="tapeout">
+      <div class="my-auto">
+
+        <style>
+          /* ---- Tapeout Section ---- */
+          .tapeout-banner {
+            position: relative;
+            border: 1px solid rgba(26,24,20,0.18);
+            border-radius: 4px;
+            padding: 2.25rem 2.5rem;
+            overflow: hidden;
+            background: var(--bg-section);
+            transition: border-color 0.22s ease;
+            max-width: 860px;
+          }
+          .tapeout-banner:hover { border-color: rgba(26,24,20,0.4); }
+
+          /* Subtle diagonal chip-trace lines in background */
+          .tapeout-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+              repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 28px,
+                rgba(26,24,20,0.035) 28px,
+                rgba(26,24,20,0.035) 29px
+              );
+            z-index: 0;
+            pointer-events: none;
+          }
+
+          .tapeout-banner > * { position: relative; z-index: 1; }
+
+          /* Top bar: live badge + title row */
+          .tapeout-top-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.25rem;
+          }
+
+          /* LIVE badge */
+          .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 12px;
+            border-radius: 2px;
+            background: var(--primary);
+            color: #EDE8DC;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-family: var(--font-body);
+            flex-shrink: 0;
+          }
+          .live-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #6fffb0;
+            box-shadow: 0 0 0 0 rgba(111,255,176,0.7);
+            animation: livePulse 1.6s ease-in-out infinite;
+            flex-shrink: 0;
+          }
+          @keyframes livePulse {
+            0%   { box-shadow: 0 0 0 0 rgba(111,255,176,0.7); }
+            70%  { box-shadow: 0 0 0 6px rgba(111,255,176,0); }
+            100% { box-shadow: 0 0 0 0 rgba(111,255,176,0); }
+          }
+
+          .tapeout-title {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.1;
+            margin: 0;
+          }
+          .tapeout-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+          }
+
+          /* Body: logo + countdown side by side */
+          .tapeout-body {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+          }
+
+          /* Tiny Tapeout Logo area */
+          .tt-logo-wrap {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+          }
+          .tt-logo-svg {
+            width: 90px;
+            height: 90px;
+          }
+          .tt-logo-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-align: center;
+          }
+
+          /* Countdown */
+          .tt-countdown-wrap {
+            flex: 1;
+            min-width: 220px;
+          }
+          .tt-countdown-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+            font-weight: 500;
+            margin-bottom: 0.65rem;
+          }
+          .tt-countdown-digits {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-end;
+            flex-wrap: wrap;
+          }
+          .tt-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+          }
+          .tt-number {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1;
+            min-width: 2ch;
+            text-align: center;
+            letter-spacing: -0.03em;
+          }
+          .tt-unit-label {
+            font-size: 0.62rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+          }
+          .tt-sep {
+            font-size: 2.2rem;
+            color: rgba(26,24,20,0.2);
+            font-family: var(--font-heading);
+            padding-bottom: 6px;
+          }
+          .tt-deadline-note {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 0.9rem;
+            font-family: var(--font-body);
+          }
+          .tt-deadline-note strong { color: var(--text-dark); }
+
+          /* Description + tags */
+          .tapeout-desc {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--text-body);
+            margin-top: 1.5rem;
+            max-width: 700px;
+          }
+          .tapeout-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 1rem;
+          }
+
+          /* Progress bar */
+          .tt-progress-wrap {
+            margin-top: 1.5rem;
+            max-width: 640px;
+          }
+          .tt-progress-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.4rem;
+          }
+          .tt-progress-row span {
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+          }
+          .tt-progress-track {
+            height: 3px;
+            background: rgba(26,24,20,0.1);
+            border-radius: 2px;
+            overflow: hidden;
+          }
+          .tt-progress-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: width 1s ease;
+          }
+
+          /* Divider line */
+          .tapeout-divider {
+            height: 1px;
+            background: rgba(26,24,20,0.1);
+            margin: 1.5rem 0;
+            max-width: 860px;
+          }
+
+          @media (max-width: 576px) {
+            .tapeout-banner { padding: 1.5rem 1.25rem; }
+            .tt-number { font-size: 2.2rem; }
+            .tapeout-title { font-size: 1.4rem; }
+            .tapeout-body { gap: 1.5rem; }
+          }
+        </style>
+
+        <h2 class="mb-2">Live Tapeout</h2>
+        <p class="subheading mb-5">Ongoing Silicon Project &middot; 2026</p>
+
+        <div class="tapeout-banner">
+
+          <!-- Top row: LIVE badge + title -->
+          <div class="tapeout-top-row">
+            <span class="live-badge">
+              <span class="live-dot"></span>
+              Live
+            </span>
+            <h3 class="tapeout-title">Tiny Tapeout SKY 26d</h3>
+          </div>
+
+          <div class="tapeout-subtitle">Silicon Shuttle &middot; SkyWater 130nm &middot; ASIC Tapeout</div>
+
+          <!-- Logo + Countdown -->
+          <div class="tapeout-body">
+
+            <!-- Tiny Tapeout Official Logo -->
+            <div class="tt-logo-wrap">
+              <img src="assets/web_img/ttlogo.png" alt="Tiny Tapeout Logo" class="tt-logo-svg" style="object-fit:contain;background:transparent;">
+              <div class="tt-logo-label">Tiny Tapeout<br>SKY 26d</div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="tt-countdown-wrap">
+              <div class="tt-countdown-label">Submission Deadline Countdown</div>
+              <div class="tt-countdown-digits">
+                <div class="tt-unit">
+                  <span class="tt-number" id="tt-days">--</span>
+                  <span class="tt-unit-label">Days</span>
+                </div>
+                <span class="tt-sep">:</span>
+                <div class="tt-unit">
+                  <span class="tt-number" id="tt-hours">--</span>
+                  <span class="tt-unit-label">Hours</span>
+                </div>
+                <span class="tt-sep">:</span>
+                <div class="tt-unit">
+                  <span class="tt-number" id="tt-mins">--</span>
+                  <span class="tt-unit-label">Mins</span>
+                </div>
+                <span class="tt-sep">:</span>
+                <div class="tt-unit">
+                  <span class="tt-number" id="tt-secs">--</span>
+                  <span class="tt-unit-label">Secs</span>
+                </div>
+              </div>
+              <div class="tt-deadline-note">Official Deadline: <strong>30 Nov 2026, 20:00 UTC</strong> &middot; Tiny Tapeout SKY 26d Shuttle</div>
+            </div>
+
+          </div><!-- /.tapeout-body -->
+
+          <div class="tapeout-divider"></div>
+
+          <!-- Description -->
+          <p class="tapeout-desc">
+            Currently taping out our own custom silicon on the <strong>Tiny Tapeout SKY 26d shuttle</strong> &mdash;
+            a community-driven ASIC fabrication program using the <strong>SkyWater 130nm open-source PDK</strong>.
+            The design targets a compact tile on the shared wafer, going through the full RTL &rarr; GDS flow
+            via <strong>OpenLane 2</strong> and open-source EDA tools before final submission to the fab.
+          </p>
+
+          <!-- Tech tags -->
+          <div class="tapeout-tags">
+            <span class="tech-tag">SkyWater SKY130</span>
+            <span class="tech-tag">OpenLane 2</span>
+            <span class="tech-tag">GDSII</span>
+            <span class="tech-tag">Yosys</span>
+            <span class="tech-tag">OpenROAD</span>
+            <span class="tech-tag">Verilog RTL</span>
+            <span class="tech-tag">ASIC Design</span>
+            <span class="tech-tag">Tiny Tapeout</span>
+            <span class="tech-tag">Physical Design</span>
+          </div>
+
+        </div><!-- /.tapeout-banner -->
+
+        <!-- Countdown Script -->
+        <script>
+          (function() {
+            // Official Tiny Tapeout SKY 26d deadline: Nov 30, 2026 20:00:00 UTC
+            var deadline = new Date('2026-11-30T20:00:00Z').getTime();
+            function pad(n) { return String(Math.floor(n)).padStart(2, '0'); }
+
+            function tick() {
+              var now = Date.now();
+              var diff = deadline - now;
+              if (diff <= 0) {
+                document.getElementById('tt-days').textContent = '00';
+                document.getElementById('tt-hours').textContent = '00';
+                document.getElementById('tt-mins').textContent = '00';
+                document.getElementById('tt-secs').textContent = '00';
+                document.getElementById('tt-progress-fill').style.width = '100%';
+                document.getElementById('tt-progress-pct').textContent = '100%';
+                return;
+              }
+              var days  = Math.floor(diff / 86400000);
+              var hours = Math.floor((diff % 86400000) / 3600000);
+              var mins  = Math.floor((diff % 3600000)  / 60000);
+              var secs  = Math.floor((diff % 60000)    / 1000);
+
+              document.getElementById('tt-days').textContent  = pad(days);
+              document.getElementById('tt-hours').textContent = pad(hours);
+              document.getElementById('tt-mins').textContent  = pad(mins);
+              document.getElementById('tt-secs').textContent  = pad(secs);
+
+              setTimeout(tick, 1000);
+            }
+            tick();
           })();
         </script>
 
