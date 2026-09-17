@@ -43,6 +43,7 @@
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tapeout">Tapeout</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#product-work">Product Work</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Internships</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
@@ -67,19 +68,16 @@
           </div>
           <div class="about-text-block">
             <h1 class="mb-0">Aadarsh <span>K A S</span></h1>
-            <div class="subheading mb-2">Embedded Systems &amp; VLSI Engineer</div>
+            <div class="subheading mb-2">Technical Product Builder &amp; Hardware Systems Engineer</div>
             <div class="subheading-contact mb-4">
               Chennai, Tamil Nadu, India &nbsp;&bull;&nbsp;
               <a href="mailto:kasaadarsh@gmail.com">kasaadarsh@gmail.com</a>
             </div>
             <p class="lead mb-4" style="text-align: justify;">
-              I’m a final-year hardware engineering student who approaches engineering by starting with the problem,
-              understanding the
-              system around it, and building toward a practical solution. I work across RTL, digital architecture,
-              embedded systems, and
-              real-world products, while thinking about technology, execution, users, and purpose together. I learn by
-              building, refine
-              through execution, and aim to turn ideas into practical systems that solve meaningful problems. </p>
+              Final-year engineer operating at the intersection of Hardware, Systems Architecture, and Technical Product
+              Management. Led user discovery across 130+ campus stakeholders, shaped B2B semiconductor marketplace
+              roadmaps in founder-led rooms, and architected clinically validated IoT hardware. I bridge low-level
+              engineering constraints — from RTL and PCB design — with user-centric product execution.</p>
             <ul class="list-inline list-social-icons mb-4">
               <li class="list-inline-item">
                 <a href="https://www.linkedin.com/in/aadarsh2812/" target="_blank" title="LinkedIn">
@@ -107,14 +105,16 @@
               </li>
             </ul>
             <div class="expertise-tags mb-0">
+              <span class="etag">Technical Product Management</span>
+              <span class="etag">User Discovery (130+ Interviews)</span>
+              <span class="etag">Competitive Benchmarking</span>
+              <span class="etag">Lean MVP Prototyping</span>
               <span class="etag">VLSI &amp; RTL Design</span>
               <span class="etag">FPGA Development</span>
               <span class="etag">IoT &amp; Embedded Systems</span>
-              <span class="etag">Digital Electronics</span>
-              <span class="etag">PCB Design</span>
-              <span class="etag">Microcontrollers</span>
-              <span class="etag">Drone Engineering</span>
-              <span class="etag">UAV Systems</span>
+              <span class="etag">PCB Design (Altium)</span>
+              <span class="etag">Edge-to-Cloud Telemetry</span>
+              <span class="etag">Cross-functional Execution</span>
             </div>
           </div>
         </div>
@@ -152,13 +152,15 @@
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            background: var(--bg-section);
           }
 
           .rec-slide.rec-active {
             opacity: 1;
             visibility: visible;
             pointer-events: auto;
+            z-index: 2;
           }
 
           /* Dot indicators */
@@ -920,6 +922,298 @@
       </div>
     </section>
     <hr class="m-0">
+    <!-- ======================== PRODUCT WORK ======================== -->
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="product-work">
+      <div class="my-auto">
+
+        <style>
+          /* ---- Product Work Section (Stacked like Projects) ---- */
+          .pw-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            max-width: 960px;
+          }
+
+          .pw-card {
+            background: transparent;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-subtle);
+            box-shadow: none;
+            padding: 1.75rem;
+            transition: border-color var(--transition);
+          }
+
+          .pw-card:hover {
+            border-color: rgba(26, 24, 20, 0.35);
+          }
+
+          .pw-card-inner {
+            display: flex;
+            gap: 1.75rem;
+            align-items: flex-start;
+          }
+
+          .pw-card-left {
+            flex: 1;
+            min-width: 0;
+          }
+
+          .pw-card-right {
+            flex-shrink: 0;
+            width: 260px;
+          }
+
+          .pw-img-frame {
+            width: 260px;
+            height: 230px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+            position: relative;
+            background: var(--bg-alt);
+            display: block;
+          }
+
+          .pw-right-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+          }
+
+          .pw-card:hover .pw-right-img {
+            transform: scale(1.03);
+          }
+
+          .pw-img-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 4px 8px;
+            background: linear-gradient(transparent, rgba(26, 24, 20, 0.75));
+            color: #EDE8DC;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 0.05em;
+            font-family: var(--font-body);
+          }
+
+          .pw-card-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 0.25rem;
+          }
+
+          .pw-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.2;
+          }
+
+          .pw-domain {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+            flex-shrink: 0;
+          }
+
+          .pw-org {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+          }
+
+          .pw-problem {
+            font-size: 0.92rem;
+            color: var(--text-body);
+            font-family: var(--font-body);
+            line-height: 1.65;
+            margin-bottom: 0.9rem;
+          }
+
+          .pw-cta {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-family: var(--font-body);
+            transition: color 0.2s;
+            letter-spacing: 0.01em;
+            margin-top: 0.75rem;
+          }
+
+          .pw-cta:hover {
+            color: var(--primary);
+          }
+
+          @media (max-width: 768px) {
+            .pw-card-inner {
+              flex-direction: column;
+            }
+
+            .pw-card-right {
+              width: 100%;
+              margin-top: 1rem;
+            }
+
+            .pw-img-frame {
+              width: 100%;
+              height: 200px;
+            }
+          }
+        </style>
+
+        <h2 class="mb-2">Product Work</h2>
+        <p class="subheading mb-5">Built &middot; Shipped &middot; Presented</p>
+
+        <div class="pw-stack">
+
+          <!-- Card 1: Inceptarc & Parts For You -->
+          <div class="pw-card">
+            <div class="pw-card-inner">
+              <div class="pw-card-left">
+                <div class="pw-card-header">
+                  <h3 class="pw-title">Inceptarc</h3>
+                  <span class="pw-domain">B2B Marketplace</span>
+                </div>
+                <div class="pw-org">Parts For You &middot; Software Sourcing Platform</div>
+                <p class="pw-problem">At Inceptarc, I worked closely with the Founder and CXOs on weekly product
+                  strategy,
+                  conducting market and competitor benchmarking to identify customer and marketplace gaps. I drove
+                  feature
+                  pruning and MVP prioritization. We institutionalized <strong>&ldquo;Product Day&rdquo; every
+                    Saturday</strong> &mdash; a dedicated day with no client work, focused entirely
+                  on building and validating Inceptarc’s own products, including <strong>PCB For You</strong> and
+                  <strong>Parts For You</strong>,
+                  toward a broader electronics ecosystem for India.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag">B2B Marketplace</span>
+                  <span class="tech-tag">Competitor Benchmarking</span>
+                  <span class="tech-tag">Feature Pruning</span>
+                  <span class="tech-tag">Dealer Sourcing</span>
+                  <span class="tech-tag">ISO Procurement</span>
+                  <span class="tech-tag">Parts For You</span>
+                </div>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7502699853647360000/" target="_blank"
+                  class="pw-cta">View Product Day Post &rarr;</a>
+              </div>
+              <div class="pw-card-right">
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7502699853647360000/" target="_blank"
+                  class="pw-img-frame" title="View Product Day post on LinkedIn">
+                  <img src="assets/images/Productdaypic.png" alt="Product Day at Inceptarc" class="pw-right-img">
+                  <div class="pw-img-label">Product Day &middot; Inceptarc</div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: MicroHeal -->
+          <div class="pw-card">
+            <div class="pw-card-inner">
+              <div class="pw-card-left">
+                <div class="pw-card-header">
+                  <h3 class="pw-title">MicroHeal</h3>
+                  <span class="pw-domain">MedTech &middot; AIoT</span>
+                </div>
+                <div class="pw-org">Spinacle Technologies &middot; Live Clinical Pilot</div>
+                <p class="pw-problem">Continuous gastrointestinal health monitoring requires passive, non-invasive
+                  telemetry
+                  with zero patient friction. Built the core hardware and embedded firmware for a smart diagnostic
+                  toilet
+                  fixture that captures optical imagery and acoustic signatures during bowel movements, streaming
+                  telemetry to
+                  Microsoft Azure for cloud AI diagnostics. Designed the custom multi-layer PCB in Altium and ESP32
+                  firmware in
+                  Embedded C, optimizing power, component footprint, and real-time edge acquisition for
+                  resource-constrained
+                  hardware. Tested and currently in active clinical/pilot use.</p>
+                <div class="tech-tags">
+                  <span class="tech-tag">Acoustic &amp; Vision AIoT</span>
+                  <span class="tech-tag">ESP32 Firmware</span>
+                  <span class="tech-tag">Altium PCB Design</span>
+                  <span class="tech-tag">Sensor-to-Cloud Telemetry</span>
+                  <span class="tech-tag">Azure Cloud</span>
+                  <span class="tech-tag">Clinical Validation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: BusNetX -->
+          <div class="pw-card">
+            <div class="pw-card-inner">
+              <div class="pw-card-left">
+                <div class="pw-card-header">
+                  <h3 class="pw-title">BusNetX</h3>
+                  <span class="pw-domain">Campus Mobility</span>
+                </div>
+                <div class="pw-org">CEADA &times; RAISE Incubator &middot; Active Development</div>
+                <p class="pw-problem">Surveyed 100+ students and 30+ faculty members to quantify campus transit
+                  bottlenecks, finding an average 25-minute wait-time uncertainty and administrative overhead from
+                  manual
+                  attendance.
+                  Architected an integrated IoT tracking ecosystem: vehicle-mounted GPS telemetry, live tracking web
+                  interface, and geofence-triggered automated attendance logging to streamline institutional transit
+                  operations.</p>
+                <div class="tech-tags">
+                  <span class="tech-tag">User Discovery (130+ Stakeholders)</span>
+                  <span class="tech-tag">Fleet Telematics</span>
+                  <span class="tech-tag">Geofencing</span>
+                  <span class="tech-tag">Automated Attendance</span>
+                  <span class="tech-tag">IoT Hardware</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: RIT Printbot -->
+          <div class="pw-card">
+            <div class="pw-card-inner">
+              <div class="pw-card-left">
+                <div class="pw-card-header">
+                  <h3 class="pw-title">RIT Printbot</h3>
+                  <span class="pw-domain">Campus Product</span>
+                </div>
+                <div class="pw-org">CEADA &times; RAISE Incubator &middot; Stage-1 MVP</div>
+                <p class="pw-problem">Campus print shop queues cause students to lose 20–40 minutes daily during peak
+                  submission hours, validated through student surveys and college administrative interviews. Devised a
+                  low-CapEx Lean MVP strategy: rather than building expensive custom printing kiosks, developed a
+                  retrofit
+                  hardware attachment module for existing campus printers, enabling automated on-demand cloud printing
+                  with
+                  minimal deployment cost. Stage 1 MVP built.</p>
+                <div class="tech-tags">
+                  <span class="tech-tag">Lean MVP Strategy</span>
+                  <span class="tech-tag">Hardware Retrofit</span>
+                  <span class="tech-tag">Friction Reduction</span>
+                  <span class="tech-tag">Queue Elimination</span>
+                  <span class="tech-tag">Campus Pilot</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.pw-stack -->
+      </div>
+    </section>
+    <hr class="m-0">
 
     <!-- ======================== PROJECTS ======================== -->
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
@@ -1036,6 +1330,7 @@
 
         <h4 class="projects-subheading mb-4 mt-3"><i class="fas fa-wifi text-primary mr-2"></i>Embedded Systems &amp;
           IoT</h4>
+
 
         <!-- Mento Band -->
         <div class="resume-item project-card d-flex flex-column flex-md-row mb-5">
@@ -1216,17 +1511,26 @@
                 <span class="exp-date-badge">Jan 2025 &ndash; Jun 2025 &middot; 6 Months</span>
               </div>
               <ul class="exp-list mt-3">
-                <li>Designed multi-layer PCBs in <strong>Altium Designer</strong> optimized for power and area in
-                  resource-constrained healthcare IoT environments.</li>
-                <li>Developed <strong>ESP32 embedded firmware</strong> in Embedded C for an IoT MVP, enabling real-time
-                  multi-sensor data acquisition and processing.</li>
-                <li>Implemented wireless communication protocols (Wi-Fi, BLE) for seamless sensor-to-cloud data
-                  transmission.</li>
-                <li>Collaborated cross-functionally to deliver a production-ready data pipeline; demonstrated strong
-                  analytical thinking in a fast-paced R&amp;D environment.</li>
-                <li>Designed and validated custom PCB schematics for the wearable sensor module.</li>
+                <li>Designed <strong>multi-layer PCBs in Altium Designer</strong>, optimizing power, area, and component
+                  selection for resource-constrained healthcare IoT applications.</li>
+                <li>Developed <strong>ESP32 embedded firmware</strong> in Embedded C for real-time multi-sensor data
+                  acquisition, processing, and wireless connectivity.</li>
+                <li>Implemented <strong>Wi-Fi/BLE communication</strong> for reliable sensor-to-cloud data transmission
+                  and IoT integration.</li>
+                <li>Translated <strong>product requirements</strong> into hardware, firmware, and system-level
+                  specifications, balancing technical constraints with MVP priorities.</li>
+                <li>Collaborated across <strong>hardware, firmware, cloud, and product teams</strong> to identify
+                  trade-offs, prioritize features, and drive prototype iterations.</li>
+                <li>Designed and validated <strong>custom PCB schematics</strong> for the wearable sensor module through
+                  iterative testing and debugging.</li>
+                <li>Contributed to <strong>product validation and user-focused iteration</strong>, using prototype
+                  feedback and system performance to refine features and improve MVP readiness.</li>
               </ul>
               <div class="tech-tags mt-3">
+                <span class="tech-tag">Product Requirements</span>
+                <span class="tech-tag">MVP Prioritization</span>
+                <span class="tech-tag">Cross-functional Collaboration</span>
+                <span class="tech-tag">Hardware Product Development</span>
                 <span class="tech-tag">Altium Designer</span>
                 <span class="tech-tag">ESP32</span>
                 <span class="tech-tag">Embedded C</span>
@@ -1378,6 +1682,18 @@
       <div class="my-auto">
         <h2 class="mb-5">Skills &amp; Tools</h2>
 
+        <div class="subheading mb-3">Product &amp; Strategy</div>
+        <ul class="list-inline skills-icon-list mb-4">
+          <li class="list-inline-item skill-chip"><i class="fas fa-map"></i> Lean Canvas</li>
+          <li class="list-inline-item skill-chip"><i class="fas fa-road"></i> Product Roadmapping</li>
+          <li class="list-inline-item skill-chip"><i class="fas fa-users"></i> User Research</li>
+          <li class="list-inline-item skill-chip"><i class="fas fa-handshake"></i> Stakeholder Management</li>
+          <li class="list-inline-item skill-chip"><i class="fas fa-rocket"></i> MVP Thinking</li>
+          <li class="list-inline-item skill-chip"><i class="fas fa-chart-line"></i> Go-to-Market</li>
+          <li class="list-inline-item skill-chip"><i class="fas fa-sitemap"></i> Cross-functional Collaboration</li>
+          <li class="list-inline-item skill-chip"><i class="fas fa-database"></i> Data-Driven Decisions</li>
+        </ul>
+
         <div class="subheading mb-3">HDL &amp; RTL Design</div>
         <ul class="list-inline skills-icon-list mb-4">
           <li class="list-inline-item skill-chip"><i class="fas fa-microchip"></i> Verilog HDL</li>
@@ -1500,33 +1816,7 @@
 
         <div class="achievement-list mb-4">
 
-          <div class="ach-entry">
-            <div class="ach-entry-left">
-              <span class="ach-year">2025</span>
-            </div>
-            <div class="ach-entry-body">
-              <strong class="ach-title">Smart India Hackathon (SIH) 2025 &ndash; Grand Finalist (Top 5 Team
-                Nationwide)</strong>
-              <span class="ach-org">AICTE &amp; Ministry of Education &middot; Lovely Professional University (LPU),
-                Punjab</span>
-              <p class="ach-desc">Recognized as a National Grand Finalist and ranked among the Top 5 teams nationwide in
-                the prestigious Smart India Hackathon (Hardware Edition) held at Lovely Professional University (LPU),
-                Punjab, pitching and prototyping an embedded hardware solution to a national problem statement.</p>
-            </div>
-          </div>
-
-          <div class="ach-entry">
-            <div class="ach-entry-left">
-              <span class="ach-year">2026</span>
-            </div>
-            <div class="ach-entry-body">
-              <strong class="ach-title">Paper Presentation (ICPECTS)</strong>
-              <span class="ach-org">Sri Sairam Engineering College</span>
-              <p class="ach-desc">Presented research at the International Conference on Power Electronics and Control
-                Technology Systems (ICPECTS) held at Sri Sairam Engineering College.</p>
-            </div>
-          </div>
-
+          <!-- 2026 -->
           <div class="ach-entry">
             <div class="ach-entry-left">
               <span class="ach-year">2026</span>
@@ -1545,6 +1835,21 @@
 
           <div class="ach-entry">
             <div class="ach-entry-left">
+              <span class="ach-year">Jul 2026</span>
+            </div>
+            <div class="ach-entry-body">
+              <strong class="ach-title">Mentor &ndash; ROBOCHIPX 2026</strong>
+              <span class="ach-org">RIT, Chennai &middot; 24-Hour Intercollege Robotics &amp; Chip Design
+                Hackathon</span>
+              <p class="ach-desc">Selected as a mentor at ROBOCHIPX 2026 &mdash; RIT's 24-hour intercollege innovation
+                hackathon bridging robotics, VLSI chip design, and embedded systems. Guided student teams across HDL,
+                embedded, and autonomous robotics tracks.</p>
+            </div>
+          </div>
+
+          <!-- 2025-26 / 2025 -->
+          <div class="ach-entry">
+            <div class="ach-entry-left">
               <span class="ach-year">2025&ndash;26</span>
             </div>
             <div class="ach-entry-body">
@@ -1560,11 +1865,53 @@
               <span class="ach-year">2025</span>
             </div>
             <div class="ach-entry-body">
+              <strong class="ach-title">Smart India Hackathon (SIH) 2025 &ndash; Grand Finalist (Top 5 Team
+                Nationwide)</strong>
+              <span class="ach-org">AICTE &amp; Ministry of Education &middot; Lovely Professional University (LPU),
+                Punjab</span>
+              <p class="ach-desc">Recognized as a National Grand Finalist and ranked among the Top 5 teams nationwide in
+                the prestigious Smart India Hackathon (Hardware Edition) held at Lovely Professional University (LPU),
+                Punjab, pitching and prototyping an embedded hardware solution to a national problem statement.</p>
+            </div>
+          </div>
+
+          <div class="ach-entry">
+            <div class="ach-entry-left">
+              <span class="ach-year">2025</span>
+            </div>
+            <div class="ach-entry-body">
+              <strong class="ach-title">Presented at UPS India Technology Center &ndash; Founders Day 2025</strong>
+              <span class="ach-org">UPS India Technology Center &middot; Fortune 500 Industry Showcase</span>
+              <p class="ach-desc">Presented the <strong>Disaster Management Drone System</strong> &mdash; an AI-powered
+                UAV for real-time disaster response, aerial surveillance, and victim detection &mdash; to industry
+                leaders and executives at UPS India Technology Center's Founders Day 2025. Supported by Principal Dr.
+                Maheswari Raja and VP Dr. Pragadish N.</p>
+            </div>
+          </div>
+
+          <div class="ach-entry">
+            <div class="ach-entry-left">
+              <span class="ach-year">2025</span>
+            </div>
+            <div class="ach-entry-body">
               <strong class="ach-title">Award for Outstanding Contribution &ndash; Centre of Excellence for IoT</strong>
               <span class="ach-org">Rajalakshmi Institute of Technology (RIT) &middot; National Science Day</span>
               <p class="ach-desc">Awarded Certificate of Appreciation on National Science Day (28-02-2025) for
                 outstanding participation, dedication, and valuable contributions in the Centre of Excellence for
                 Internet of Things (IoT) toward innovative project development.</p>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="ach-entry">
+            <div class="ach-entry-left">
+              <span class="ach-year">2024</span>
+            </div>
+            <div class="ach-entry-body">
+              <strong class="ach-title">Paper Presentation (ICPECTS)</strong>
+              <span class="ach-org">Sri Sairam Engineering College</span>
+              <p class="ach-desc">Presented research at the International Conference on Power Electronics and Control
+                Technology Systems (ICPECTS) held at Sri Sairam Engineering College.</p>
             </div>
           </div>
 
@@ -1593,6 +1940,20 @@
 
         <div class="achievement-list mb-4">
 
+          <!-- 2026 -->
+          <div class="ach-entry">
+            <div class="ach-entry-left">
+              <span class="ach-year">2026</span>
+            </div>
+            <div class="ach-entry-body">
+              <strong class="ach-title">Vishwakarma'26 &ndash; National 24hr Hackathon</strong>
+              <span class="ach-org">AdAstra &middot; Cambridge Institute of Technology, Bangalore</span>
+              <p class="ach-desc">Participated in a nationally competitive 24-hour hardware hackathon, conceptualising
+                and presenting an embedded systems prototype under time pressure.</p>
+            </div>
+          </div>
+
+          <!-- 2025 -->
           <div class="ach-entry">
             <div class="ach-entry-left">
               <span class="ach-year">2025</span>
@@ -1603,12 +1964,16 @@
               <span class="ach-org">MIC &amp; AICTE &middot; Hardware Edition &middot; Lovely Professional University
                 (LPU), Punjab</span>
               <p class="ach-desc">National Grand Finalist and ranked among the Top 5 teams nationwide at the prestigious
-                Smart India Hackathon (Hardware Edition) held at Lovely Professional University (LPU), Punjab,
-                engineering an innovative embedded systems solution to address a critical real-world problem statement.
+                Smart India Hackathon (Hardware Edition) held at Lovely Professional University (LPU), Punjab.
+                Served as <strong>System Architect, Hardware Developer, UI/UX Designer, and Lead Product
+                  Presenter</strong> &mdash;
+                translating an intensive real-world engineering challenge into a working embedded system and
+                high-conviction jury pitch.
               </p>
             </div>
           </div>
 
+          <!-- 2024 -->
           <div class="ach-entry">
             <div class="ach-entry-left">
               <span class="ach-year">Nov 2024</span>
@@ -1618,18 +1983,6 @@
               <span class="ach-org">AIC T-Hub &times; JJCET</span>
               <p class="ach-desc">Competed in a 24-hour hackathon focused on robotics and artificial intelligence,
                 designing and prototyping a sensor-driven automated system.</p>
-            </div>
-          </div>
-
-          <div class="ach-entry">
-            <div class="ach-entry-left">
-              <span class="ach-year">2026</span>
-            </div>
-            <div class="ach-entry-body">
-              <strong class="ach-title">Vishwakarma'26 &ndash; National 24hr Hackathon</strong>
-              <span class="ach-org">AdAstra &middot; Cambridge Institute of Technology, Bangalore</span>
-              <p class="ach-desc">Participated in a nationally competitive 24-hour hardware hackathon, conceptualising
-                and presenting an embedded systems prototype under time pressure.</p>
             </div>
           </div>
 
@@ -1879,7 +2232,8 @@
 
   <footer class="portfolio-footer">
     <div class="footer-inner">
-      <p class="mb-1">Designed &amp; Built by <strong>Aadarsh K A S</strong> &middot; VLSI Engineer</p>
+      <p class="mb-1">Designed &amp; Built by <strong>Aadarsh K A S</strong> &middot; Technical Product Builder &amp;
+        Hardware Systems Engineer</p>
       <p class="mb-0 text-muted small">&copy; 2026 &middot; Chennai, India &middot; <a
           href="mailto:kasaadarsh@gmail.com">kasaadarsh@gmail.com</a></p>
     </div>
