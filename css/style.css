@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * Aadarsh K A S - Portfolio CSS
  * "Editorial" - Physical Intelligence / f(i) inspired
  * Warm Parchment - Playfair Display - Inter
@@ -847,3 +847,192 @@ section.resume-section .resume-item .resume-date { min-width: none; }
   letter-spacing: 0.04em;
   max-width: 600px;
 }
+
+/* ============================================================
+   Proof Strip (Hero)
+   ============================================================ */
+.proof-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.proof-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  background: var(--bg-alt);
+  color: var(--text-dark);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-body);
+}
+.proof-badge i {
+  color: var(--primary);
+  font-size: 0.74rem;
+}
+
+/* ============================================================
+   Flagship Case Study (MENTO) & Deep Product Cards
+   ============================================================ */
+.pw-flagship {
+  background: var(--bg-section) !important;
+  border: 1.5px solid rgba(26, 24, 20, 0.25) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.pw-insight-quote {
+  border-left: 3px solid var(--primary);
+  padding: 0.8rem 1.25rem;
+  margin: 1.25rem 0 1.5rem 0;
+  background: rgba(26, 24, 20, 0.03);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.pw-section-title {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.pw-pivot-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  font-family: var(--font-body);
+  margin: 1rem 0 1.5rem 0;
+  border: 1px solid var(--border-subtle);
+}
+.pw-pivot-table th {
+  background: var(--bg-alt);
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pw-pivot-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-body);
+  vertical-align: top;
+}
+.pw-pivot-table tr:last-child td {
+  border-bottom: none;
+}
+.pw-pivot-table td:first-child {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.pw-pivot-table td:nth-child(2) {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.pw-iterations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.85rem;
+  margin: 0.75rem 0 1.25rem 0;
+}
+.pw-iter-step {
+  padding: 0.85rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+}
+.pw-iter-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pw-iter-desc {
+  font-size: 0.78rem;
+  color: var(--text-body);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.pw-status-box {
+  background: rgba(26, 24, 20, 0.025);
+  border: 1px dashed rgba(26, 24, 20, 0.22);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+.pw-status-box strong {
+  color: var(--text-dark);
+}
+
+/* Experience Domain Relevance Badges */
+.domain-pill {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(184, 51, 42, 0.08);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Achievements Collapsible */
+.ach-hidden {
+  display: none !important;
+}
+.ach-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+  padding: 8px 18px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.ach-toggle-btn:hover {
+  background: var(--primary);
+  color: #EDE8DC;
+  border-color: var(--primary);
+}
+
+/* Leadership Spotlight Card */
+.mentor-spotlight {
+  border: 1px solid rgba(26, 24, 20, 0.18);
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-top: 2rem;
+}
+
