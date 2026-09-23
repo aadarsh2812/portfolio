@@ -48,7 +48,7 @@
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li> -->
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#highlights">Highlights</a></li>
-        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#recommendations">Recommendations</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#recommendations">Testimonials</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -107,9 +107,9 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="assets/docs/resume.pdf" download="Aadarsh_KAS_Resume.pdf" title="Download Resume">
+                <a href="#" onclick="openResumeModal(); return false;" title="View Resume">
                   <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i
-                      class="fa fa-download fa-stack-1x fa-inverse"></i></span>
+                      class="fa fa-file-alt fa-stack-1x fa-inverse"></i></span>
                 </a>
               </li>
             </ul>
@@ -1709,10 +1709,10 @@
 
     <hr class="m-0">
 
-    <!-- ======================== RECOMMENDATIONS ======================== -->
+    <!-- ======================== TESTIMONIALS ======================== -->
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="recommendations">
       <div class="my-auto">
-        <h2 class="mb-2">Recommendations</h2>
+        <h2 class="mb-2">Testimonials</h2>
         <p class="subheading mb-5">Endorsements &middot; Faculty Leadership &middot; Industry Mentors</p>
 
         <style>
@@ -1973,8 +1973,8 @@
               <li><i class="fa-li fab fa-github text-primary"></i><a href="https://github.com/aadarsh2812"
                   target="_blank">github.com/aadarsh2812</a></li>
             </ul>
-            <a href="assets/docs/Resume.pdf" target="_blank" class="btn btn-primary btn-lg resume-download-btn">
-              <i class="fas fa-download mr-2"></i> Download Resume
+            <a href="#" onclick="openResumeModal(); return false;" class="btn btn-primary btn-lg resume-download-btn">
+              <i class="fas fa-eye mr-2"></i> View Resume
             </a>
           </div>
           <div class="contact-form-block">
@@ -2032,6 +2032,103 @@
     <img id="lightbox-img" class="lightbox-img" alt="Expanded view" onclick="event.stopPropagation()">
     <p id="lightbox-caption" class="lightbox-caption"></p>
   </div>
+
+  <!-- Resume Viewer Modal -->
+  <div id="resume-modal" class="resume-modal-overlay" onclick="closeResumeModal(event)">
+    <div class="resume-modal-box" onclick="event.stopPropagation()">
+      <div class="resume-modal-header">
+        <span class="resume-modal-title"><i class="fas fa-file-pdf mr-2" style="color:var(--primary);"></i>Aadarsh K A S &mdash; Resume</span>
+        <div class="resume-modal-actions">
+          <a href="assets/docs/resume.pdf" download="Aadarsh_KAS_Resume.pdf" class="btn btn-primary btn-sm" style="font-size:0.82rem; padding: 5px 14px;">
+            <i class="fas fa-download mr-1"></i> Download
+          </a>
+          <button class="resume-modal-close" onclick="closeResumeModal()" aria-label="Close">&times;</button>
+        </div>
+      </div>
+      <div class="resume-modal-body">
+        <iframe id="resume-iframe" src="" title="Resume Preview" class="resume-iframe" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .resume-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.72);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+    .resume-modal-overlay.active { display: flex; }
+    .resume-modal-box {
+      background: var(--bg-card, #fff);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 860px;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.45);
+      overflow: hidden;
+      animation: resumeModalIn 0.22s ease;
+    }
+    @keyframes resumeModalIn {
+      from { opacity: 0; transform: scale(0.96) translateY(16px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .resume-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border-subtle, rgba(0,0,0,0.1));
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .resume-modal-title {
+      font-family: var(--font-heading, serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark, #1a1814);
+    }
+    .resume-modal-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .resume-modal-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      color: var(--text-muted, #888);
+      padding: 2px 6px;
+      border-radius: 4px;
+      transition: color 0.15s;
+    }
+    .resume-modal-close:hover { color: var(--primary, #b8332a); }
+    .resume-modal-body {
+      flex: 1;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
+    .resume-iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 70vh;
+      border: none;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .resume-modal-box { border-radius: 8px; }
+      .resume-iframe { min-height: 60vh; }
+    }
+  </style>
 
   <script>
     // Scroll Animations
@@ -2120,6 +2217,35 @@
       });
     });
     // Testimonial carousel uses the same certs-carousel-wrapper auto-scroll engine above — no extra init needed.
+
+    // Resume Viewer Modal
+    function openResumeModal() {
+      const modal = document.getElementById('resume-modal');
+      const iframe = document.getElementById('resume-iframe');
+      if (!iframe.src || iframe.src === window.location.href) {
+        iframe.src = 'assets/docs/resume.pdf';
+      }
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeResumeModal(e) {
+      if (e && e.target !== document.getElementById('resume-modal') && !e.currentTarget.classList.contains('resume-modal-overlay')) return;
+      const modal = document.getElementById('resume-modal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('resume-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeResumeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('resume-modal');
+        if (modal.classList.contains('active')) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    });
   </script>
 </body>
 
